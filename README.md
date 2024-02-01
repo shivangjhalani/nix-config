@@ -1,3 +1,6 @@
+# LEARN NIX TwT
+https://nixos.org/learn.html
+
 # Basic Commands
 In the dotfiles directory (The directory where this repo's flake.nix and home.nix is present)
 - Update flakes : `nix flake update`
