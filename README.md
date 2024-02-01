@@ -6,3 +6,4 @@ In the dotfiles directory (The directory where this repo's flake.nix and home.ni
 
 # Structure
 Inspired from https://gitlab.com/librephoenix/nixos-config which inturn is inspired from many places lol.
+I prefer naming the `profile` folder there as `hosts` and I moved the `user` and `system` folder as subfolders under `modules`.
