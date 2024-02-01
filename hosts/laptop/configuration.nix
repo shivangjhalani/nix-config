@@ -84,7 +84,6 @@
     description = "sjay";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
     #  thunderbird
     ];
   };
@@ -120,7 +119,6 @@
   system.stateVersion = "23.11"; # Did you read the comment?
 
   environment.systemPackages = with pkgs; [
-    git  
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
