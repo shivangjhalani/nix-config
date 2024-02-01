@@ -15,10 +15,12 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       lib = nixpkgs.lib;
+      host = "laptop";
+      user = "sjay";
     in {
       nixosConfigurations = {
 	nixos = lib.nixosSystem {
-	  modules = [ ./configuration.nix ];
+	  modules = [ ./hosts/${host}/nixos/configuration.nix ];
 	};
       };
       homeConfigurations = {
@@ -27,7 +29,7 @@
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
-        modules = [ ./home.nix ];
+        modules = [ ./home-manager/${user}/home.nix ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
