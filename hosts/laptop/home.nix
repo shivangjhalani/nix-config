@@ -2,7 +2,8 @@
 {
 
   imports = [
-    
+    ../../modules/user/shell/shell.nix
+    ../../modules/user/apps/git/git.nix    
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -25,6 +26,7 @@
     # Core
     git
     firefox
+    neovim
     
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -75,7 +77,7 @@
   #  /etc/profiles/per-user/sjay/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    # EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
