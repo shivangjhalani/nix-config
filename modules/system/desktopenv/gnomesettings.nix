@@ -21,11 +21,4 @@
     atomix # puzzle game
   ]);
 
-  users.users.sjay = {
-    dconf = {
-      enable = true;
-      settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
-    };
-  };
-
 }

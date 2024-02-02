@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/system/desktopenv/gnomesettings.nix
+      ../../modules/system/autologin.nix
     ];
 
   # Bootloader.

@@ -2,8 +2,18 @@
 font-scale=0.99999999999999967
 last-window-size=(842, 554)
 
+[org/gnome/Snapshot]
+is-maximized=false
+window-height=640
+window-width=800
+
+[org/gnome/calendar]
+active-view='month'
+window-maximized=true
+window-size=(768, 600)
+
 [org/gnome/control-center]
-last-panel='bluetooth'
+last-panel='multitasking'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/app-folders]
@@ -25,9 +35,17 @@ categories=['X-SuSE-YaST']
 name='suse-yast.directory'
 translate=true
 
+[org/gnome/desktop/background]
+picture-uri-dark='file:///nix/store/4bv66i2z5a6bzpj2kza2q8xcrfsfc8w5-Blobs-gnome.png'
+primary-color='#3a4ba0'
+secondary-color='#2f302f'
+
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us')]
 xkb-options=['terminate:ctrl_alt_bksp']
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
 
 [org/gnome/desktop/notifications]
 application-children=['gnome-power-panel', 'org-gnome-console']
@@ -38,11 +56,25 @@ application-id='gnome-power-panel.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-console]
 application-id='org.gnome.Console.desktop'
 
+[org/gnome/desktop/peripherals/touchpad]
+tap-to-click=true
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/screensaver]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///nix/store/3bwqp8jm632ya4mzy1lp0zip9n6m0r91-simple-blue-2016-02-19/share/backgrounds/nixos/nix-wallpaper-simple-blue.png'
+primary-color='#3a4ba0'
+secondary-color='#2f302f'
+
 [org/gnome/epiphany]
 ask-for-default=false
 
 [org/gnome/evolution-data-server]
 migrated=true
+
+[org/gnome/mutter]
+workspaces-only-on-primary=false
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='icon-view'
@@ -58,6 +90,20 @@ welcome-dialog-last-shown-version='45.3'
 [org/gnome/shell/world-clocks]
 locations=@av []
 
+[org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=140
+sort-column='name'
+sort-directories-first=true
+sort-order='ascending'
+type-format='category'
+view-type='list'
+window-size=(857, 372)
+
 [org/gtk/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
@@ -67,7 +113,7 @@ show-type-column=true
 sidebar-width=157
 sort-column='name'
 sort-directories-first=false
-sort-order='ascending'
+sort-order='descending'
 type-format='category'
 window-position=(26, 23)
 window-size=(1231, 821)

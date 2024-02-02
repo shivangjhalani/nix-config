@@ -3,7 +3,8 @@
 
   imports = [
     # SystemLevel
-    ../../modules/system/desktopenv/gnomesettings-hm.nix
+    #../../modules/system/desktopenv/gnomesettings-hm.nix ADDED IN CONFIGURATION.NIX
+    ../../modules/system/desktopenv/dconf.nix
 
     # UserLevel
     ../../modules/user/shell/shell.nix
@@ -32,7 +33,9 @@
     firefox
     neovim
     zsh
-     
+    ranger
+    fzf
+
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello

@@ -1,4 +1,7 @@
-{ pkgs, ... }:
+{ config, pkgs, lib, ... }:
+
+with lib;
+
 
 let
 
@@ -6,9 +9,11 @@ let
   myAliases = {
   };
 
+
 in
 
 {
+
   programs.bash = {
     enable = true;
     enableCompletion = true;
