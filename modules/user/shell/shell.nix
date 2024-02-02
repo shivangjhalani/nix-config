@@ -10,7 +10,7 @@ in
 
 {
   programs.bash = {
-    enable = false;
+    enable = true;
     enableCompletion = true;
     shellAliases = myAliases;
   };

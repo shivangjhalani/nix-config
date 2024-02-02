@@ -2,6 +2,10 @@
 {
 
   imports = [
+    # SystemLevel
+    ../../modules/system/desktopenv/gnomesettings-hm.nix
+
+    # UserLevel
     ../../modules/user/shell/shell.nix
     ../../modules/user/apps/git/git.nix    
   ];
