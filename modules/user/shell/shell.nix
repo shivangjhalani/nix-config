@@ -27,16 +27,29 @@ in
     syntaxHighlighting.enable = true;
     shellAliases = myAliases;
 #    initExtra = ''
-#    PROMPT=" ◉ %U%F{magenta}%n%f%u@%U%F{blue}%m%f%u:%F{yellow}%~%f
-#     %F{green}→%f "
-#    RPROMPT="%F{red}▂%f%F{yellow}▄%f%F{green}▆%f%F{cyan}█%f%F{blue}▆%f%F{magenta}▄%f%F{white}▂%f"
-#    [ $TERM = "dumb" ] && unsetopt zle && PS1='$ '
+#      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #    '';
+#    zplug = {
+#      enable = true;
+#      plugins = [{
+#        name = "romkatv/powerlevel10k";
+#        tags = [ "as:theme" "depth:1" ];
+#      }];
+#    };
   };
 
   home.packages = with pkgs; [
     direnv nix-direnv
+    ranger
+    zsh
+    fzf
+    #fd Unnamed dependency of fzf?
   ];
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   programs.direnv = {
     enable = true;

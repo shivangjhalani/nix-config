@@ -16,4 +16,8 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
 - [x] Use ZSH
 - [x] Autologin
 - [ ] Power and battery management
-- [ ] Dotfiles and ricing
+- [ ] Dotfiles
+  - [ ] Browser
+  - [ ] nvim
+  - [ ] Terminal ricing
+- [ ] Nix-colors and ricing
