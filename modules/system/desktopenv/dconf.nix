@@ -4,23 +4,18 @@ let
   #mkTuple = lib.hm.gvariant.mkTuple;
 in
 {
+  imports = [ ./gnomeextensions.nix ];
+
   dconf.settings = {
 
-    #"org/gnome/shell" = {
-    #    disable-user-extensions = false;
-    #    disabled-extensions = [ ];
-    #    enabled-extensions = [
-    #      #"native-window-placement@gnome-shell-extensions.gcampax.github.com"
-    #      #"pop-shell@system76.com"
-    #      "caffeine@patapon.info"
-    #      "hidetopbar@mathieu.bidon.ca"
-    #      #"gsconnect@andyholmes.github.io"
-    #    ];
-    #};
-    #"org/gnome/shell/extensions/hidetopbar" = {
-    #    enable-active-window = false;
-    #    enable-intellihide = true; 
-    #};
+    "org/gnome/shell" = {
+      favorite-apps=[
+      #"org.gnome.Calendar.desktop"
+      "org.gnome.Nautilus.desktop"
+      "firefox.desktop"
+      "org.gnome.Console.desktop"
+      ]; 
+    };
 
     #"org/gnome/desktop/peripherals/mouse" = {
     #  "natural-scroll" = false;

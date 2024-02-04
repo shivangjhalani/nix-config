@@ -9,7 +9,8 @@
     # UserLevel
     ../../modules/user/shell/shell.nix
     ../../modules/user/apps/git/git.nix    
-  ];
+    #../../modules/user/apps/spicetify/spicetify.nix
+];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -27,12 +28,14 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = with pkgs; [
+  home.packages = [
     # Core
-    git
-    firefox
-    neovim
- 
+    pkgs.git
+    pkgs.firefox
+    pkgs.neovim
+    
+    # Apps
+
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello

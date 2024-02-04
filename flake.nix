@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of sjay";
+  description = ":)";
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
@@ -9,6 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
 
   outputs = { self, nixpkgs, home-manager, ... }:
     let
@@ -32,7 +33,7 @@
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
+        };
       };
     };
-  };
 }

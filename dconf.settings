@@ -13,7 +13,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='multitasking'
+last-panel='wifi'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/app-folders]
@@ -46,15 +46,20 @@ xkb-options=['terminate:ctrl_alt_bksp']
 
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
+enable-animations=true
+enable-hot-corners=false
 
 [org/gnome/desktop/notifications]
-application-children=['gnome-power-panel', 'org-gnome-console']
+application-children=['gnome-power-panel', 'org-gnome-console', 'org-gnome-nautilus']
 
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-console]
 application-id='org.gnome.Console.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
 
 [org/gnome/desktop/peripherals/touchpad]
 tap-to-click=true
@@ -73,8 +78,19 @@ ask-for-default=false
 [org/gnome/evolution-data-server]
 migrated=true
 
+[org/gnome/gnome-system-monitor]
+maximized=false
+network-total-in-bits=false
+show-dependencies=false
+show-whose-processes='user'
+window-state=(700, 500, 26, 23)
+
+[org/gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
 [org/gnome/mutter]
-workspaces-only-on-primary=false
+edge-tiling=true
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='icon-view'
@@ -83,9 +99,95 @@ search-filter-time-type='last_modified'
 
 [org/gnome/nautilus/window-state]
 initial-size=(890, 550)
+maximized=false
+
+[org/gnome/settings-daemon/plugins/power]
+power-button-action='interactive'
 
 [org/gnome/shell]
+disable-user-extensions=false
+disabled-extensions=['disabled']
+enabled-extensions=['Vitals@CoreCoding.com', 'espresso@coadmunkee.github.com', 'blur-my-shell@aunetx', 'hidetopbar@mathieu.bidon.ca', 'just-perfection-desktop@just-perfection']
+favorite-apps=['org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Console.desktop']
+last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='45.3'
+
+[org/gnome/shell/extensions/dash-to-dock]
+apply-custom-theme=false
+background-opacity=0.80000000000000004
+custom-theme-shrink=false
+dash-max-icon-size=48
+dock-position='BOTTOM'
+height-fraction=0.90000000000000002
+intellihide-mode='FOCUS_APPLICATION_WINDOWS'
+preferred-monitor=-2
+preferred-monitor-by-connector='eDP-1'
+show-favorites=true
+
+[org/gnome/shell/extensions/espresso]
+allow-override=true
+control-nightlight=false
+enable-charging=false
+enable-docked=false
+enable-fullscreen=true
+has-battery=true
+restore-state=false
+show-indicator=true
+show-notifications=false
+user-enabled=false
+
+[org/gnome/shell/extensions/hidetopbar]
+enable-active-window=true
+enable-intellihide=true
+
+[org/gnome/shell/extensions/just-perfection]
+accessibility-menu=true
+activities-button=true
+animation=4
+clock-menu=true
+dash=true
+dash-app-running=true
+keyboard-layout=true
+osd=true
+overlay-key=true
+panel=true
+panel-in-overview=true
+panel-notification-icon=true
+power-icon=true
+quick-settings=true
+search=true
+show-apps-button=false
+switcher-popup-delay=true
+theme=false
+window-picker-icon=true
+window-preview-caption=false
+window-preview-close-button=true
+workspace=true
+workspace-peek=true
+workspace-popup=true
+workspace-switcher-should-show=false
+workspaces-in-app-grid=true
+world-clock=true
+
+[org/gnome/shell/extensions/vitals]
+alphabetize=true
+hide-icons=false
+hide-zeros=false
+hot-sensors=['_memory_usage_', '_processor_usage_', '__temperature_avg__']
+include-static-info=false
+menu-centered=false
+position-in-panel=2
+show-battery=false
+show-fan=false
+show-memory=true
+show-network=true
+show-processor=true
+show-storage=true
+show-system=true
+show-temperature=true
+unit=0
+update-time=3
+use-higher-precision=false
 
 [org/gnome/shell/world-clocks]
 locations=@av []

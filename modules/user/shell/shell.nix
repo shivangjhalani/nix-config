@@ -7,6 +7,7 @@ let
 
   # My shell aliases
   myAliases = {
+    #cat = "bat";
   };
 
 
@@ -43,12 +44,20 @@ in
     ranger
     zsh
     fzf
+    bat
     #fd Unnamed dependency of fzf?
   ];
 
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
+    defaultOptions = [
+      "--multi"
+      "--height 40%"
+      "--border"
+      "--preview-window 'right:60%'"
+      "--preview 'bat --color=always --style=header,grid --line-range :300 {}'" 
+    ];
   };
 
   programs.direnv = {
