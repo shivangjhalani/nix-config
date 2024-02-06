@@ -24,3 +24,4 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
   - [ ] nvim
   - [ ] Terminal ricing
 - [ ] Nix-colors and ricing
+- [ ] Virtualisation

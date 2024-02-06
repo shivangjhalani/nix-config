@@ -57,6 +57,10 @@ in
       power-button-action = "interactive";
     };
 
+    "org/gnome/desktop/wm/keybindings" = {
+      switch-windows=["<Alt>Tab"];
+    };
+
     #"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {      
       #name = "Terminal";
       #binding = "<Super>Return";

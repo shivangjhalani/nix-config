@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ../../modules/system/desktopenv/gnomesettings.nix
       ../../modules/system/autologin.nix
+      ../../modules/system/virtualisation/virt-manager.nix
     ];
 
   # Bootloader.
@@ -84,7 +85,7 @@
   users.users.sjay = {
     isNormalUser = true;
     description = "sjay";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
     #  thunderbird
     ];

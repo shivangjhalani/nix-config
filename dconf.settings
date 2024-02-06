@@ -13,7 +13,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='keyboard'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/app-folders]
@@ -72,6 +72,12 @@ picture-uri='file:///nix/store/3bwqp8jm632ya4mzy1lp0zip9n6m0r91-simple-blue-2016
 primary-color='#3a4ba0'
 secondary-color='#2f302f'
 
+[org/gnome/desktop/wm/keybindings]
+switch-applications=@as []
+switch-applications-backward=@as []
+switch-windows=['<Alt>Tab']
+switch-windows-backward=['<Shift><Alt>Tab']
+
 [org/gnome/epiphany]
 ask-for-default=false
 
@@ -108,7 +114,7 @@ power-button-action='interactive'
 disable-user-extensions=false
 disabled-extensions=['disabled']
 enabled-extensions=['Vitals@CoreCoding.com', 'espresso@coadmunkee.github.com', 'blur-my-shell@aunetx', 'hidetopbar@mathieu.bidon.ca', 'just-perfection-desktop@just-perfection']
-favorite-apps=['org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Console.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Console.desktop']
 last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='45.3'
 
@@ -158,7 +164,7 @@ quick-settings=true
 search=true
 show-apps-button=false
 switcher-popup-delay=true
-theme=false
+theme=true
 window-picker-icon=true
 window-preview-caption=false
 window-preview-close-button=true
@@ -219,3 +225,15 @@ sort-order='descending'
 type-format='category'
 window-position=(26, 23)
 window-size=(1231, 821)
+
+[org/virt-manager/virt-manager]
+manager-window-height=550
+manager-window-width=550
+
+[org/virt-manager/virt-manager/connections]
+autoconnect=['qemu:///system']
+uris=['qemu:///system']
+
+[org/virt-manager/virt-manager/vmlist-fields]
+disk-usage=false
+network-traffic=false
