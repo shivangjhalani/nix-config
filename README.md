@@ -18,10 +18,14 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
 - [x] Gnome Extensions
 - [x] Apps in dock
 - [ ] Custom desktop shortcuts
-- [ ] [x] Power and battery management
+- [ ] Power and battery management (Have done tlp for now, need more research)
 - [ ] Dotfiles
   - [ ] Browser
   - [ ] nvim
+- [ ] Productivity
+  - [x] fzf
+  - [x] nvim
+- [ ] Ricing
+  - [ ] Nix-colors
   - [ ] Terminal ricing
-- [ ] Nix-colors and ricing
-- [ ] Virtualisation
+- [x] Virtualisation

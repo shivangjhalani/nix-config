@@ -35,7 +35,7 @@
     pkgs.neovim
     pkgs.alacritty    
     pkgs.kitty
-    
+    pkgs.powertop    
     # Apps
 
     # # Adds the 'hello' command to your environment. It prints a friendly

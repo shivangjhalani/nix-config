@@ -11,7 +11,7 @@
       ../../modules/system/desktopenv/gnomesettings.nix
       ../../modules/system/autologin.nix
       ../../modules/system/virtualisation/virt-manager.nix
-      ../../modules/system/powermgmt/tlp.nix
+      ../../modules/system/powermgmt/powermgmt.nix
     ];
 
   # Bootloader.

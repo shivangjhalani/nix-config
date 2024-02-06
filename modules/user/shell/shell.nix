@@ -45,6 +45,7 @@ in
     zsh
     fzf
     bat
+    ripgrep
     #fd Unnamed dependency of fzf?
   ];
 
@@ -52,8 +53,9 @@ in
     enable = true;
     enableZshIntegration = true;
     defaultOptions = [
-      "--multi"
-      "--height 40%"
+      "--reverse"
+      #"--multi" DOESNT WORK TwT
+      "--height 50%"
       "--border"
       "--preview-window 'right:60%'"
       "--preview 'bat --color=always --style=header,grid --line-range :300 {}'" 
