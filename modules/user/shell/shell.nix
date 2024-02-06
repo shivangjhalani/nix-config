@@ -5,6 +5,7 @@ with lib;
 
 let
 
+  
   # My shell aliases
   myAliases = {
     #cat = "bat";
@@ -14,6 +15,10 @@ let
 in
 
 {
+
+  imports = [
+    ./tmux.nix
+  ];
 
   programs.bash = {
     enable = true;
