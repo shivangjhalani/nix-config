@@ -18,7 +18,7 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
 - [x] Gnome Extensions
 - [x] Apps in dock
 - [ ] Custom desktop shortcuts
-- [ ] Power and battery management
+- [ ] [x] Power and battery management
 - [ ] Dotfiles
   - [ ] Browser
   - [ ] nvim
