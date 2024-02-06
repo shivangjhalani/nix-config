@@ -28,7 +28,9 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
 - [ ] Productivity
   - [x] fzf
   - [ ] look into `fd`
-  - [x] nvim
+  - [ ] Learn tmux (already installed, now configuration left) - [video](https://www.youtube.com/watch?v=GH3kpsbbERo)
+  - [x] nvim installed
+  - [ ] Obsidian in nvim :) [github](https://github.com/epwalsh/obsidian.nvim)
 - [ ] Ricing
   - [ ] Nix-colors
   - [ ] Terminal ricing

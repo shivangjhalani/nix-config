@@ -2,6 +2,7 @@
 
   programs.tmux = {
     enable = true;
+    shortcut = "a";
     clock24 = true;
     extraConfig = '' # used for less common options, intelligently combines if defined in multiple places. Writes directly to /etc/tmux.conf
     '';
