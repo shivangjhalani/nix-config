@@ -9,6 +9,8 @@ let
   # My shell aliases
   myAliases = {
     #cat = "bat";
+    v = "nvim";
+    c = "clear";
   };
 
 

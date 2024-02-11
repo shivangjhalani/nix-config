@@ -1,6 +1,3 @@
-After restarting, auto-cpufreq stops working in daemon mode, I have services.auto-cpufreq.enable = true; in configuration.nix
-After a nixos-rebuild it starts up again
-
 ## LEARN NIX TwT
 https://nixos.org/learn.html
 

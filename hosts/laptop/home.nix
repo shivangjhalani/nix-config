@@ -3,13 +3,14 @@
 
   imports = [
     # SystemLevel
-    #../../modules/system/desktopenv/gnomesettings-hm.nix ADDED IN CONFIGURATION.NIX
+    #../../modules/system/desktopenv/gnomesettings-hm.nix #ADDED IN CONFIGURATION.NIX
     ../../modules/system/desktopenv/dconf.nix
 
     # UserLevel
     ../../modules/user/shell/shell.nix
     ../../modules/user/apps/git/git.nix    
     #../../modules/user/apps/spicetify/spicetify.nix
+    #../../modules/user/gaming/gaming.nix # TwT have to install steam in configuration.nix TwT
 ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -34,7 +35,6 @@
     pkgs.firefox
     pkgs.neovim
     pkgs.alacritty    
-    pkgs.kitty
     pkgs.powertop    
     # Apps
 

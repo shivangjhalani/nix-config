@@ -61,6 +61,10 @@ in
       switch-windows=["<Alt>Tab"];
     };
 
+    "org/gnome/desktop/sound" = {
+      event-sounds=false;
+    };
+
     #"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {      
       #name = "Terminal";
       #binding = "<Super>Return";

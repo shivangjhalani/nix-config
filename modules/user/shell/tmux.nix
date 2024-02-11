@@ -2,9 +2,13 @@
 
   programs.tmux = {
     enable = true;
+    escapeTime = 0;
+    baseIndex = 1;
+    keyMode = "vi";
     shortcut = "a";
     clock24 = true;
-    extraConfig = '' # used for less common options, intelligently combines if defined in multiple places. Writes directly to /etc/tmux.conf
+    extraConfig = '' 
+    # used for less common options, intelligently combines if defined in multiple places. Writes directly to /etc/tmux.conf
     '';
   };
 

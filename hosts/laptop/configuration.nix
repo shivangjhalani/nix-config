@@ -12,6 +12,7 @@
       ../../modules/system/autologin.nix
       ../../modules/system/virtualisation/virt-manager.nix
       ../../modules/system/powermgmt/powermgmt.nix
+      #../../modules/user/gaming/gaming.nix
     ];
 
   # Bootloader.
