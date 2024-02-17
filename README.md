@@ -22,6 +22,7 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
 - [ ] Dotfiles
   - [ ] Browser
   - [ ] nvim
+    - [ ] Learn telescope
 - [ ] Productivity
   - [x] fzf
   - [ ] look into `fd`
@@ -32,3 +33,4 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
   - [ ] Nix-colors
   - [ ] Terminal ricing
 - [x] Virtualisation
+- [ ] Managing secrets declaratively : [nix-sops](https://github.com/Mic92/sops-nix)

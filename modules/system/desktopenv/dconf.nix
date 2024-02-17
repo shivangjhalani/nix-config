@@ -10,10 +10,9 @@ in
 
     "org/gnome/shell" = {
       favorite-apps=[
-      #"org.gnome.Calendar.desktop"
       "org.gnome.Nautilus.desktop"
       "firefox.desktop"
-      "org.gnome.Console.desktop"
+      "kitty.deskop"
       ]; 
     };
 
@@ -49,6 +48,7 @@ in
 
     "org/gnome/mutter" = {
       edge-tiling = true;
+      dynamic-workspaces= true;
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
@@ -72,4 +72,3 @@ in
     #};
   };
 }
-

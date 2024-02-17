@@ -9,6 +9,12 @@
     clock24 = true;
     extraConfig = '' 
     # used for less common options, intelligently combines if defined in multiple places. Writes directly to /etc/tmux.conf
+    #set -g default-terminal "screen-256color"
+    #set -ag terminal-overrides ",xterm-256color:RGB"
+    #set -g allow-passthrough on
+    #set-option -sg escape-time 10
+    #set-option -g focus-events on
+    #set-option -sa terminal-overrides ',alacritty:RGB'
     '';
   };
 

@@ -19,7 +19,7 @@
         #"pop-shell@system76.com"
         "Vitals@CoreCoding.com"
         #"ddterm@amezin.github.com"
-        "espresso@coadmunkee.github.com"
+        #"espresso@coadmunkee.github.com"
         #"caffeine@patapon.info" # USE ESPRESSO
         "blur-my-shell@aunetx"
         "hidetopbar@mathieu.bidon.ca" # MIGHT CONFLICT WITH BLUR MY SHELL

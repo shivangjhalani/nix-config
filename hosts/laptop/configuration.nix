@@ -12,7 +12,7 @@
       ../../modules/system/autologin.nix
       ../../modules/system/virtualisation/virt-manager.nix
       ../../modules/system/powermgmt/powermgmt.nix
-      #../../modules/user/gaming/gaming.nix
+      ../../modules/user/gaming/gaming.nix
     ];
 
   # Bootloader.
@@ -75,7 +75,7 @@
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
 
-    # use the example session manager (no others are packaged yet so this is enabled by default,
+    # use the eample session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };

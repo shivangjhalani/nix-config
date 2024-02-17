@@ -8,9 +8,10 @@
 
     # UserLevel
     ../../modules/user/shell/shell.nix
+    ../../modules/user/apps/neovim/nvim.nix
     ../../modules/user/apps/git/git.nix    
     #../../modules/user/apps/spicetify/spicetify.nix
-    #../../modules/user/gaming/gaming.nix # TwT have to install steam in configuration.nix TwT
+    ../../modules/user/apps/firefox/firefox.nix
 ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -31,12 +32,13 @@
   # environment.
   home.packages = [
     # Core
-    pkgs.git
-    pkgs.firefox
-    pkgs.neovim
-    pkgs.alacritty    
-    pkgs.powertop    
-    # Apps
+    #pkgs.git
+    #pkgs.firefox
+    #pkgs.neovim
+    #pkgs.alacritty    
+    #pkgs.powertop    
+		pkgs.gcc
+		# Apps
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.

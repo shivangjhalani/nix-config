@@ -2,10 +2,7 @@
 
 with lib;
 
-
 let
-
-  
   # My shell aliases
   myAliases = {
     #cat = "bat";
@@ -13,13 +10,13 @@ let
     c = "clear";
   };
 
-
 in
-
 {
-
   imports = [
     ./tmux.nix
+    #./alacritty.nix
+    ./kitty.nix
+    ./font.nix
   ];
 
   programs.bash = {
@@ -30,10 +27,22 @@ in
 
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
+    #enableAutosuggestions = true;
     enableCompletion = true;
+    history = {
+      size = 100000;
+      save = 100000;
+    };
     syntaxHighlighting.enable = true;
     shellAliases = myAliases;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ 
+      		  "git" 
+                  "colored-man-pages" 
+                  #"zsh-nix-shell"
+		];
+    };
 #    initExtra = ''
 #      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #    '';
@@ -53,7 +62,8 @@ in
     fzf
     bat
     ripgrep
-    #fd Unnamed dependency of fzf?
+		tree
+		fd
   ];
 
   programs.fzf = {
