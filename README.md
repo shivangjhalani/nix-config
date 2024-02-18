@@ -21,16 +21,17 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
 - [ ] Power and battery management (Have done auto-cpufreq for now)
 - [ ] Dotfiles
   - [ ] Browser
-  - [ ] nvim
-    - [ ] Learn telescope
+  - [x] nvim
+    - [x] Learn telescope
+    - [ ] Setup LSP
 - [ ] Productivity
   - [x] fzf
-  - [ ] look into `fd`
-  - [ ] Learn tmux (already installed, now configuration left) - [video](https://www.youtube.com/watch?v=GH3kpsbbERo)
+  - [ ] look into `fd`, is isntalled currently
+  - [ ] Learn tmux (already installed, now configuration left) - [video](https://www.youtube.com/watch?v=GH3kpsbbERo) _Using kitty rn_
   - [x] nvim installed
   - [ ] Obsidian in nvim :) [github](https://github.com/epwalsh/obsidian.nvim)
 - [ ] Ricing
-  - [ ] Nix-colors
+  - [ ] Nix-colors, idk if I need this when im using catppuccin
   - [ ] Terminal ricing
 - [x] Virtualisation
 - [ ] Managing secrets declaratively : [nix-sops](https://github.com/Mic92/sops-nix)

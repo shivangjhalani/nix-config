@@ -9,11 +9,7 @@ in
   dconf.settings = {
 
     "org/gnome/shell" = {
-      favorite-apps=[
-      "org.gnome.Nautilus.desktop"
-      "firefox.desktop"
-      "kitty.deskop"
-      ]; 
+      favorite-apps=[ "org.gnome.Nautilus.desktop" "firefox.desktop" "kitty.deskop" ]; 
     };
 
     #"org/gnome/desktop/peripherals/mouse" = {
@@ -40,7 +36,7 @@ in
     "org/gnome/desktop/background" = {
       #color-shading-type = "solid";
       #picture-options = "zoom";
-      picture-uri-dark = "file://${../../../assets/wallpapers/Blobs-gnome.png}";
+      picture-uri-dark = "file://${../../../assets/wallpapers/blushed-slash.png}";
     };
     #"org/gnome/desktop/screensaver" = {
     #  "picture-uri" = "file:///home/gvolpe/Pictures/nixos.png";
