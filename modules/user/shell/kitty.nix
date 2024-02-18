@@ -9,7 +9,7 @@
 		# extraConfig also writes the string directly to kitty.cong
 		extraConfig = ''
 hide_window_decorations yes		
-background_opacity			0.8
+background_opacity			0.9
 background_blur					1
 
 # vim:ft=kitty

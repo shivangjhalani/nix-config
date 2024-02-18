@@ -17,7 +17,8 @@ in
     #./alacritty.nix
     ./kitty.nix
     ./font.nix
-  ];
+		./starship.nix
+	];
 
   programs.bash = {
     enable = true;
@@ -36,28 +37,20 @@ in
     syntaxHighlighting.enable = true;
     shellAliases = myAliases;
 		# Directly using HM plugins option instead of OMZ
-		plugins = [
-			{
-				name = "powerlevel10k";
-				src = pkgs.zsh-powerlevel10k;
-				file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-			}
-		];
-		initExtra = ''
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-		'';
+		#plugins = [
+		#	{
+		#		name = "powerlevel10k";
+		#		src = pkgs.zsh-powerlevel10k;
+		#		file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+		#	}
+		#];
   };
-
-	home.file.".p10k.zsh" = {
-		source = ./.p10k.zsh;
-		executable = true;
-	};
 
   home.packages = with pkgs; [
     direnv nix-direnv
     ranger
     zsh
-    fzf
+    #fzf
     #bat
     ripgrep
 		tree
