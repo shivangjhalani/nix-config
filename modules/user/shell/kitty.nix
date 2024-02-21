@@ -3,14 +3,23 @@
     enable = true;
     shellIntegration.enableZshIntegration = true;
     font.name = "JetBrainsMono";
-		# settings writes to ~/.config/kitty/kitty.conf
-		settings = {
-		};
-		# extraConfig also writes the string directly to kitty.cong
-		extraConfig = ''
+    # settings writes to ~/.config/kitty/kitty.conf
+    settings = {
+    };
+    keybindings = {
+      "kitty_mod+x" = "toggle_layout stack";
+    };
+    # extraConfig also writes the string directly to kitty.cong
+    extraConfig = ''
 hide_window_decorations yes		
-background_opacity			0.9
-background_blur					1
+background_opacity	0.9
+background_blur		1
+
+tab_bar_style		powerline 
+tab_title_max_length 	18
+tab_title_template 	"{index}:{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{title}"
+
+enable_audio_bell 	no
 
 # vim:ft=kitty
 
@@ -91,6 +100,6 @@ color14 #94E2D5
 # white
 color7  #BAC2DE
 color15 #A6ADC8
-		'';
-	};
+    '';
+  };
 }

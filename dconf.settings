@@ -1,3 +1,6 @@
+[com/mattjakeman/ExtensionManager]
+last-used-version='0.4.3'
+
 [org/gnome/Console]
 font-scale=1.0
 last-window-size=(842, 554)
@@ -6,6 +9,10 @@ last-window-size=(842, 554)
 is-maximized=false
 window-height=640
 window-width=800
+
+[org/gnome/Totem]
+active-plugins=['autoload-subtitles', 'variable-rate', 'open-directory', 'mpris', 'save-file', 'apple-trailers', 'screenshot', 'screensaver', 'vimeo', 'rotation', 'recent', 'movie-properties', 'skipto']
+subtitle-encoding='UTF-8'
 
 [org/gnome/calculator]
 accuracy=9
@@ -34,7 +41,7 @@ panel-id='world'
 size=(870, 690)
 
 [org/gnome/control-center]
-last-panel='multitasking'
+last-panel='keyboard'
 window-state=(960, 571, false)
 
 [org/gnome/desktop/app-folders]
@@ -71,7 +78,10 @@ enable-animations=true
 enable-hot-corners=false
 
 [org/gnome/desktop/notifications]
-application-children=['gnome-power-panel', 'org-gnome-console', 'org-gnome-nautilus', 'gnome-network-panel', 'firefox', 'org-gnome-texteditor']
+application-children=['gnome-power-panel', 'org-gnome-console', 'org-gnome-nautilus', 'gnome-network-panel', 'firefox', 'org-gnome-texteditor', 'code']
+
+[org/gnome/desktop/notifications/application/code]
+application-id='code.desktop'
 
 [org/gnome/desktop/notifications/application/firefox]
 application-id='firefox.desktop'
@@ -122,12 +132,13 @@ dual-page=false
 dual-page-odd-left=false
 enable-spellchecking=true
 fullscreen=false
-inverted-colors=false
-show-sidebar=true
+inverted-colors=true
+show-sidebar=false
 sidebar-page='links'
-sidebar-size=148
-sizing-mode='automatic'
-window-ratio=(0.62499384848574302, 1.1111111111111112)
+sidebar-size=463
+sizing-mode='free'
+window-ratio=(1.0619576956245611, 1.1109154214027339)
+zoom=0.87019527072384772
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -173,6 +184,10 @@ search-filter-time-type='last_modified'
 initial-size=(890, 550)
 maximized=false
 
+[org/gnome/nm-applet/eap/559e7bfe-91e8-4951-991f-a24b3e6c7ccc]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/nm-applet/eap/e86f2458-89ed-4107-b369-bbc9d9bd6b75]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
@@ -180,15 +195,19 @@ ignore-phase2-ca-cert=false
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
 
+[org/gnome/settings-daemon/plugins/media-keys]
+logout=@as []
+
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='interactive'
 
 [org/gnome/shell]
 disable-user-extensions=false
 disabled-extensions=['disabled']
-enabled-extensions=['Vitals@CoreCoding.com', 'blur-my-shell@aunetx', 'hidetopbar@mathieu.bidon.ca', 'just-perfection-desktop@just-perfection']
-favorite-apps=['org.gnome.Nautilus.desktop', 'firefox.desktop', 'kitty.desktop']
+enabled-extensions=['Vitals@CoreCoding.com', 'blur-my-shell@aunetx', 'just-perfection-desktop@just-perfection', 'pano@elhan.io']
+favorite-apps=['obsidian.desktop', 'kitty.deskop', 'org.gnome.Nautilus.desktop', 'firefox.desktop']
 last-selected-power-profile='power-saver'
+remember-mount-password=false
 welcome-dialog-last-shown-version='45.3'
 
 [org/gnome/shell/extensions/dash-to-dock]
@@ -213,7 +232,7 @@ has-battery=true
 restore-state=false
 show-indicator=true
 show-notifications=false
-user-enabled=false
+user-enabled=true
 
 [org/gnome/shell/extensions/hidetopbar]
 enable-active-window=true
@@ -248,6 +267,14 @@ workspace-switcher-should-show=false
 workspaces-in-app-grid=true
 world-clock=true
 
+[org/gnome/shell/extensions/pano]
+global-shortcut=['<Super>v']
+history-length=50
+is-in-incognito=false
+play-audio-on-copy=false
+send-notification-on-copy=false
+show-indicator=false
+
 [org/gnome/shell/extensions/vitals]
 alphabetize=true
 hide-icons=false
@@ -267,6 +294,9 @@ show-temperature=true
 unit=0
 update-time=3
 use-higher-precision=false
+
+[org/gnome/shell/keybindings]
+toggle-message-tray=['<Shift><Control><Alt><Super>s']
 
 [org/gnome/shell/world-clocks]
 locations=@av []

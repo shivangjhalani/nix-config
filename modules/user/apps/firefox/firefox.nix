@@ -11,10 +11,21 @@
     };
   in
 {
+
+	imports = [
+		./userChrome.nix
+	];
   programs = {
     firefox = {
       enable = true;
       #languagePacks = [ "en-US" ];
+
+			profiles = {
+				sjay = {
+					name = "sjay";
+					# Custom CSS defined in userChrome.nix
+				};
+			};
 
       /* ---- POLICIES ---- */
       # Check about:policies#documentation for options.
@@ -43,7 +54,7 @@
         # Valid strings for installation_mode are "allowed", "blocked",
         # "force_installed" and "normal_installed".
         ExtensionSettings = {
-          "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
+          "*".installation_mode = "allowed"; # blocks all addons except the ones specified below
           # uBlock Origin:
           "uBlock0@raymondhill.net" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
@@ -54,22 +65,22 @@
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
             installation_mode = "force_installed";
           };
-          # 1Password:
-          #"{d634138d-c276-4fc8-924b-40a0ea21d284}" = {
-          #  install_url = "https://addons.mozilla.org/firefox/downloads/latest/1password-x-password-manager/latest.xpi";
-          #  installation_mode = "force_installed";
-          #};
-	  # BitWarden:
-          "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
-	    install_url = "https://addons.mozilla.org/firefox/downloads/file/4233394/bitwarden_password_manager-2024.2.0.xpi";
-            installation_mode = "force_installed";
-	   }; 
-	  # DarkReader:
-          "{addon@darkreader.org}" = {
-	    install_url = "https://addons.mozilla.org/firefox/downloads/file/4233074/darkreader-4.9.77.xpi";
-            installation_mode = "force_installed";
-	   }; 
-        };
+					# BitWarden:
+					"{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
+						install_url = "https://addons.mozilla.org/firefox/downloads/file/4233394/bitwarden_password_manager-2024.2.0.xpi";
+						installation_mode = "force_installed";
+					}; 
+					# DarkReader:
+					"addon@darkreader.org" = {
+						install_url = "https://addons.mozilla.org/firefox/downloads/file/4233074/darkreader-4.9.77.xpi";
+						installation_mode = "force_installed";
+					};
+					# Video Speed Controller
+					"{7be2ba16-0f1e-4d93-9ebc-5164397477a9}" = {
+						install_url = "https://addons.mozilla.org/firefox/downloads/file/3756025/videospeed-0.6.3.3.xpi";
+						installation_mode = "force_installed";
+					};
+				};
   
         /* ---- PREFERENCES ---- */
         # Check about:config for options.
@@ -92,6 +103,7 @@
           "browser.newtabpage.activity-stream.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
+					"toolkit.legacyUserProfileCustomizations.stylesheets" = lock-true;
         };
       };
     };

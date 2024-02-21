@@ -2,12 +2,15 @@
 
 {
   home.packages = with pkgs; [
+    gnome-extension-manager
+
     gnomeExtensions.espresso
     gnomeExtensions.vitals
     gnomeExtensions.blur-my-shell
     gnomeExtensions.hide-top-bar
     gnomeExtensions.just-perfection
     #gnomeExtensions.dash-to-dock
+    gnomeExtensions.pano
   ];
 
   dconf.settings = {
@@ -22,10 +25,11 @@
         #"espresso@coadmunkee.github.com"
         #"caffeine@patapon.info" # USE ESPRESSO
         "blur-my-shell@aunetx"
-        "hidetopbar@mathieu.bidon.ca" # MIGHT CONFLICT WITH BLUR MY SHELL
+        #"hidetopbar@mathieu.bidon.ca" # MIGHT CONFLICT WITH BLUR MY SHELL
         "just-perfection-desktop@just-perfection"
         #"gsconnect@andyholmes.github.io"
 	#"dash-to-dock@micxgx.gmail.com"
+	"pano@elhan.io"
       ];
     };
  
@@ -53,6 +57,13 @@
       show-apps-button=false;
       window-preview-caption=false;
       animation=4;
+    };
+    "org/gnome/shell/extensions/pano" = {
+      history-length=50;
+      play-audio-on-copy=false;
+      send-notification-on-copy=false;
+      show-indicator=false;
+      global-shortcut=["<Super>v"];
     };
   };
 }

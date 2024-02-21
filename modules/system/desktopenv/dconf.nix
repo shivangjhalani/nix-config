@@ -9,7 +9,7 @@ in
   dconf.settings = {
 
     "org/gnome/shell" = {
-      favorite-apps=[ "org.gnome.Nautilus.desktop" "firefox.desktop" "kitty.deskop" ]; 
+      favorite-apps=[ "obsidian.desktop" "kitty.deskop" "org.gnome.Nautilus.desktop" "firefox.desktop" ]; 
     };
 
     #"org/gnome/desktop/peripherals/mouse" = {
@@ -55,6 +55,9 @@ in
 
     "org/gnome/desktop/wm/keybindings" = {
       switch-windows=["<Alt>Tab"];
+    };
+    "org/gnome/shell/keybindings" = {
+      toggle-message-tray=["<Shift><Control><Alt><Super>s"];
     };
 
     "org/gnome/desktop/sound" = {

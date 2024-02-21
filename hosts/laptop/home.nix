@@ -1,18 +1,26 @@
-{ self, config, pkgs, ... }:
+{ self, config, pkgs, inputs, ... }:
 {
 
   imports = [
-    # SystemLevel
-    #../../modules/system/desktopenv/gnomesettings-hm.nix #ADDED IN CONFIGURATION.NIX
-    ../../modules/system/desktopenv/dconf.nix
-
     # UserLevel
+    
     ../../modules/user/shell/shell.nix
-    ../../modules/user/apps/neovim/nvim.nix
+    #../../modules/user/apps/neovim/nvim.nix
+    ../../modules/user/apps/neovim/nixvim.nix
+    ../../modules/user/apps/vscode/vscode.nix
     ../../modules/user/apps/git/git.nix    
     #../../modules/user/apps/spicetify/spicetify.nix
     ../../modules/user/apps/firefox/firefox.nix
-];
+    #../../modules/user/apps/nextcloud/nextcloud.nix 
+    ../../modules/user/apps/unimatrix/unimatrix.nix
+    ../../modules/user/apps/lazygit/lazygit.nix
+
+    
+    # SystemLevel
+    #../../modules/system/desktopenv/gnomesettings-hm.nix #ADDED IN CONFIGURATION.NIX
+    ../../modules/system/desktopenv/dconf.nix
+  ];
+
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -37,8 +45,9 @@
     #pkgs.neovim
     #pkgs.alacritty    
     #pkgs.powertop    
-		pkgs.gcc
-		# Apps
+    #pkgs.obsidian
+    pkgs.gnome.cheese
+    # Apps
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
