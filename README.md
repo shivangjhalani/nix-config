@@ -32,7 +32,7 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
   - [ ] look into `fd`, is isntalled currently
   - [ ] Learn tmux (already installed, now configuration left) - [video](https://www.youtube.com/watch?v=GH3kpsbbERo) _Using kitty rn_
   - [x] nvim installed
-  - [ ] Obsidian in nvim :) [github](https://github.com/epwalsh/obsidian.nvim)
+  - [ ] ~obsidian in nvim~ :) [github](https://github.com/epwalsh/obsidian.nvim)
 - [ ] Ricing
   - [ ] Nix-colors, idk if I need this when im using catppuccin
   - [ ] Terminal ricing
