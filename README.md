@@ -38,3 +38,4 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
   - [ ] Terminal ricing
 - [x] Virtualisation
 - [ ] Managing secrets declaratively : [nix-sops](https://github.com/Mic92/sops-nix)
+
