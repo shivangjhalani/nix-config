@@ -7,13 +7,15 @@
     ../../modules/user/shell/shell.nix
     #../../modules/user/apps/neovim/nvim.nix
     ../../modules/user/apps/neovim/nixvim.nix
-    ../../modules/user/apps/vscode/vscode.nix
+    #../../modules/user/apps/vscode/vscode.nix
     ../../modules/user/apps/git/git.nix    
-    #../../modules/user/apps/spicetify/spicetify.nix
+    ../../modules/user/apps/spicetify/spicetify.nix
     ../../modules/user/apps/firefox/firefox.nix
     #../../modules/user/apps/nextcloud/nextcloud.nix 
-    ../../modules/user/apps/unimatrix/unimatrix.nix
+    #../../modules/user/apps/unimatrix/unimatrix.nix
     ../../modules/user/apps/lazygit/lazygit.nix
+    #../../modules/user/apps/lf/lf.nix
+    #../../modules/user/apps/obsidian/obsidian.nix  #Added in configuration.nix
 
     
     # SystemLevel
@@ -45,7 +47,6 @@
     #pkgs.neovim
     #pkgs.alacritty    
     #pkgs.powertop    
-    #pkgs.obsidian
     pkgs.gnome.cheese
     # Apps
 

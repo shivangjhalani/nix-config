@@ -13,6 +13,7 @@
       ../../modules/system/virtualisation/virt-manager.nix
       ../../modules/system/powermgmt/powermgmt.nix
       ../../modules/user/gaming/gaming.nix
+      ../../modules/user/apps/obsidian/obsidian.nix
     ];
 
   # Bootloader.

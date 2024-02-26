@@ -1,6 +1,6 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, lib, spicetify-nix, ... }:
 let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+  spicePkgs = spicetify-nix.packages.${pkgs.system}.default;
 in
 {
   # allow spotify to be installed if you don't have unfree enabled already
@@ -9,7 +9,7 @@ in
   ];
 
   # import the flake's module for your system
-  imports = [ inputs.spicetify-nix.homeManagerModules.default ];
+  imports = [ spicetify-nix.homeManagerModule ];
 
   # configure spicetify :)
   programs.spicetify =
@@ -21,7 +21,7 @@ in
       enabledExtensions = with spicePkgs.extensions; [
         fullAppDisplay
         shuffle # shuffle+ (special characters are sanitized out of ext names)
-        hidePodcasts
+        #hidePodcasts
       ];
     };
 }
