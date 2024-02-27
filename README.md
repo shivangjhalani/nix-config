@@ -16,7 +16,7 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
 
 
 ## To-Dos
-`Take inspiration from : [sioodmy-dotfiles](https://github.com/sioodmy/dotfiles/tree/main)`
+> Take inspiration from : [sioodmy-dotfiles](https://github.com/sioodmy/dotfiles/tree/main)
 - [x] Basic Structure
 - [x] Use ZSH
 - [x] Autologin
