@@ -14,9 +14,9 @@ Inspired from https://gitlab.com/librephoenix/nixos-config which inturn is inspi
 I prefer naming the `profile` folder there as `hosts` and I moved the `user` and `system` folder as subfolders under `modules`.
 
 
-`Take inspiration from : [sioodmy-dotfiles](https://github.com/sioodmy/dotfiles/tree/main)`
 
 ## To-Dos
+`Take inspiration from : [sioodmy-dotfiles](https://github.com/sioodmy/dotfiles/tree/main)`
 - [x] Basic Structure
 - [x] Use ZSH
 - [x] Autologin
