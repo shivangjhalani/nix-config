@@ -18,6 +18,7 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
 - [x] Autologin
 - [x] Gnome Extensions
 - [x] Apps in dock
+- [ ] AutoUpdate in background : [nixos-wiki-auto-updates](https://nixos.wiki/wiki/Automatic_system_upgrades)
 - [ ] Custom desktop shortcuts
 - [ ] Power and battery management (Have done auto-cpufreq for now)
 - [ ] Dotfiles
@@ -25,8 +26,8 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
   - [x] nvim
     - [x] Learn telescope
     - [ ] Setup LSP
-    - [ ] LazyGit
-    - [ ] Clipboard
+    - [x] LazyGit
+    - [x] Clipboard
 - [ ] Productivity
   - [x] fzf
   - [ ] look into `fd`, is isntalled currently
@@ -38,4 +39,4 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
   - [ ] Terminal ricing
 - [x] Virtualisation
 - [ ] Managing secrets declaratively : [nix-sops](https://github.com/Mic92/sops-nix)
-
+- [ ] LD fix, Run unpatched dynamic binaries : [nix-ld](https://github.com/Mic92/nix-ld)

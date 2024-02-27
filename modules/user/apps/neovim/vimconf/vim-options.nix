@@ -36,5 +36,8 @@
       mapleader = " ";
       maplocalleader = " ";
     };
+
+    extraConfigVim = ''
+    '';
   };
 }
