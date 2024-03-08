@@ -35,7 +35,7 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
 - [ ] Productivity
   - [x] fzf
   - [ ] look into `fd`, is isntalled currently
-  - [ ] Learn tmux (already installed, now configuration left) - [video](https://www.youtube.com/watch?v=GH3kpsbbERo) _Using kitty rn_
+  - [x] Learn tmux (already installed, now configuration left) - [video](https://www.youtube.com/watch?v=GH3kpsbbERo) _Using kitty rn_
   - [x] nvim installed
   - [ ] ~obsidian in nvim~ :) [github](https://github.com/epwalsh/obsidian.nvim)
 - [ ] Ricing
@@ -43,4 +43,5 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
   - [ ] Terminal ricing
 - [x] Virtualisation
 - [ ] Managing secrets declaratively : [nix-sops](https://github.com/Mic92/sops-nix)
+- [ ] Setup Comin : Git Push NixOS Machines [comin](https://github.com/nlewo/comin/tree/main)
 - [ ] LD fix, Run unpatched dynamic binaries : [nix-ld](https://github.com/Mic92/nix-ld)

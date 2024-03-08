@@ -7,7 +7,7 @@
     gnomeExtensions.espresso
     gnomeExtensions.vitals
     gnomeExtensions.blur-my-shell
-    gnomeExtensions.hide-top-bar
+    #gnomeExtensions.hide-top-bar
     gnomeExtensions.just-perfection
     #gnomeExtensions.dash-to-dock
     gnomeExtensions.pano

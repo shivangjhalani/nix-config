@@ -11,6 +11,9 @@
     };
     # extraConfig also writes the string directly to kitty.cong
     extraConfig = ''
+map kitty_mod+enter launch --cwd=current --type=window
+#map kitty_mod+t     launch --cwd=current --type=tab
+
 hide_window_decorations yes		
 background_opacity	0.9
 background_blur		1

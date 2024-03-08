@@ -14,6 +14,7 @@
     #../../modules/user/apps/nextcloud/nextcloud.nix 
     #../../modules/user/apps/unimatrix/unimatrix.nix
     ../../modules/user/apps/lazygit/lazygit.nix
+    ../../modules/user/apps/btop/btop.nix
     #../../modules/user/apps/lf/lf.nix
     #../../modules/user/apps/obsidian/obsidian.nix  #Added in configuration.nix
 
@@ -21,6 +22,7 @@
     # SystemLevel
     #../../modules/system/desktopenv/gnomesettings-hm.nix #ADDED IN CONFIGURATION.NIX
     ../../modules/system/desktopenv/dconf.nix
+    ../../modules/system/desktopenv/gtk.nix
   ];
 
 
@@ -47,7 +49,9 @@
     #pkgs.neovim
     #pkgs.alacritty    
     #pkgs.powertop    
-    pkgs.gnome.cheese
+    pkgs.vlc
+    pkgs.telegram-desktop
+
     # Apps
 
     # # Adds the 'hello' command to your environment. It prints a friendly

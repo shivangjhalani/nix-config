@@ -11,6 +11,7 @@
       ../../modules/system/desktopenv/gnomesettings.nix
       ../../modules/system/autologin.nix
       ../../modules/system/virtualisation/virt-manager.nix
+      ../../modules/system/virtualisation/docker.nix
       ../../modules/system/powermgmt/powermgmt.nix
       ../../modules/user/gaming/gaming.nix
       ../../modules/user/apps/obsidian/obsidian.nix
