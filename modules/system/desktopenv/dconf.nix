@@ -18,13 +18,17 @@ in
     #};
 
     "org/gnome/desktop/peripherals/touchpad" = {
-      "tap-to-click" = true;
-      "two-finger-scrolling-enabled" = true;
+      tap-to-click = true;
+      two-finger-scrolling-enabled = true;
     };
 
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
+    };
+
+    "org/gnome/desktop/screensaver" = {
+      lock-enabled = false;
     };
 
     #"org/gnome/desktop/input-sources" = {

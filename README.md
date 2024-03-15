@@ -30,6 +30,7 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
   - [x] nvim
     - [x] Learn telescope
     - [ ] Setup LSP
+    - [ ] Treesitter _installed, but need to configure and understand_
     - [x] LazyGit
     - [x] Clipboard
 - [ ] Productivity
@@ -45,3 +46,12 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
 - [ ] Managing secrets declaratively : [nix-sops](https://github.com/Mic92/sops-nix)
 - [ ] Setup Comin : Git Push NixOS Machines [comin](https://github.com/nlewo/comin/tree/main)
 - [ ] LD fix, Run unpatched dynamic binaries : [nix-ld](https://github.com/Mic92/nix-ld)
+
+## Random battery checks
+```
+❯ upower -i /org/freedesktop/UPower/devices/battery_BAT1
+  updated:              Friday 15 March 2024 11:34:55 PM (10 seconds ago)
+  battery
+    charge-cycles:       160
+    capacity:            95.8528%
+```

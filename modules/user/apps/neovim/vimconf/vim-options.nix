@@ -20,6 +20,12 @@
       # UI
       number = true;
       relativenumber = true;
+
+      # Folding
+      foldenable = false;
+      foldmethod = "expr";
+      #foldexpr= "v:lua.vim.treesitter.foldexpr()";
+      #foldtext = "v:lua.vim.treesitter.foldtext()";
       
       # Indentation
       shiftwidth = 2;

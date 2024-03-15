@@ -51,6 +51,8 @@
     #pkgs.powertop    
     pkgs.vlc
     pkgs.telegram-desktop
+    pkgs.albert
+    pkgs.ulauncher
 
     # Apps
 

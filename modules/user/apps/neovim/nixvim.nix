@@ -9,6 +9,7 @@
     ./vimconf/plugins/telescope.nix
     ./vimconf/plugins/autoclose.nix
     ./vimconf/plugins/indent-blankline.nix
+    ./vimconf/plugins/treesitter.nix
     #./vimconf/plugins/obsidian-nvim.nix
     #./vimconf/plugins/ufo.nix #Will setup after lsp and stuff
   ];
