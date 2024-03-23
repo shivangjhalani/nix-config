@@ -51,7 +51,11 @@ I prefer naming the `profile` folder there as `hosts` and I moved the `user` and
 ```
 ❯ upower -i /org/freedesktop/UPower/devices/battery_BAT1
   updated:              Friday 15 March 2024 11:34:55 PM (10 seconds ago)
-  battery
     charge-cycles:       160
     capacity:            95.8528%
+```
+```
+  updated:              Sunday 17 March 2024 10:53:18 PM (3 seconds ago)
+    charge-cycles:       162
+    capacity:            97.0377%
 ```
