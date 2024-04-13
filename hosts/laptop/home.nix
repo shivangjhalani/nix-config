@@ -6,7 +6,8 @@
     
     ../../modules/user/shell/shell.nix
     #../../modules/user/apps/neovim/nvim.nix
-    ../../modules/user/apps/neovim/nixvim.nix
+    #../../modules/user/apps/neovim/nixvim.nix
+    ../../modules/user/apps/neovim/nixvim/config/default.nix
     #../../modules/user/apps/vscode/vscode.nix
     ../../modules/user/apps/git/git.nix    
     ../../modules/user/apps/spicetify/spicetify.nix
