@@ -6,8 +6,7 @@
     
     ../../modules/user/shell/shell.nix
     #../../modules/user/apps/neovim/nvim.nix
-    #../../modules/user/apps/neovim/nixvim.nix
-    ../../modules/user/apps/neovim/nixvim/default.nix
+    ../../modules/user/apps/neovim/nixvim.nix
     #../../modules/user/apps/vscode/vscode.nix
     ../../modules/user/apps/git/git.nix    
     ../../modules/user/apps/spicetify/spicetify.nix
@@ -52,9 +51,8 @@
     #pkgs.powertop    
     pkgs.vlc
     pkgs.telegram-desktop
-    pkgs.albert
     pkgs.ulauncher
-
+		pkgs.zed-editor
     # Apps
 
     # # Adds the 'hello' command to your environment. It prints a friendly

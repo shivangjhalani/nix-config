@@ -3,7 +3,7 @@
     plugins = {
       indent-blankline = {
       enable = true;
-      extraOptions = {
+      settings = {
 	indent.char = "▎";
 	scope.enabled = false;
       };

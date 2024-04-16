@@ -10,11 +10,13 @@
 
     colorschemes.catppuccin = {
       enable = true;
-      flavour = "mocha";
-      transparentBackground = true;
+			settings = {
+				flavour = "mocha";
+      	transparent_background = true;
+			};
     };
 
-    options = {
+    opts = {
       fileencoding = "utf-8";
 
       # UI
