@@ -1,21 +1,24 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, lib, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../../modules/system/desktopenv/gnomesettings.nix
-      ../../modules/system/autologin.nix
-      ../../modules/system/virtualisation/virt-manager.nix
-      ../../modules/system/virtualisation/docker.nix
-      ../../modules/system/powermgmt/powermgmt.nix
-      ../../modules/user/gaming/gaming.nix
-      ../../modules/user/apps/obsidian/obsidian.nix
-    ];
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../../modules/system/desktopenv/gnomesettings.nix
+    ../../modules/system/autologin.nix
+    ../../modules/system/opengl.nix
+    ../../modules/system/virtualisation/virt-manager.nix
+    ../../modules/system/virtualisation/docker.nix
+    ../../modules/system/powermgmt/powermgmt.nix
+    ../../modules/user/gaming/gaming.nix
+    ../../modules/user/apps/obsidian/obsidian.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -89,17 +92,16 @@
   users.users.sjay = {
     isNormalUser = true;
     description = "sjay";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = ["networkmanager" "wheel" "libvirtd"];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
   # I use zsh btw
-  environment.shells = with pkgs; [ zsh ];
+  environment.shells = with pkgs; [zsh];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -135,9 +137,10 @@
   ];
 
   #nix.settings.experimental-features = [ "nix-command" "flakes" ];
-	nix = {
+  nix = {
     package = pkgs.nixFlakes;
-    extraOptions = lib.optionalString (config.nix.package == pkgs.nixFlakes)
+    extraOptions =
+      lib.optionalString (config.nix.package == pkgs.nixFlakes)
       "experimental-features = nix-command flakes";
   };
 }

@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     gnome-extension-manager
 
@@ -11,12 +9,13 @@
     gnomeExtensions.just-perfection
     #gnomeExtensions.dash-to-dock
     gnomeExtensions.pano
+    gnomeExtensions.appindicator
   ];
 
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
-      disabled-extensions = [ "disabled" ];
+      disabled-extensions = ["disabled"];
       enabled-extensions = [
         #"native-window-placement@gnome-shell-extensions.gcampax.github.com"
         #"pop-shell@system76.com"
@@ -28,15 +27,16 @@
         #"hidetopbar@mathieu.bidon.ca" # MIGHT CONFLICT WITH BLUR MY SHELL
         "just-perfection-desktop@just-perfection"
         #"gsconnect@andyholmes.github.io"
-	#"dash-to-dock@micxgx.gmail.com"
-	"pano@elhan.io"
+        #"dash-to-dock@micxgx.gmail.com"
+        "pano@elhan.io"
+        "appindicatorsupport@rgcjonas.gmail.com"
       ];
     };
- 
+
     "org/gnome/shell/extensions/vitals" = {
-      show-battery = false;     
-      show-fan= false;
-      update-time= 3;
+      show-battery = false;
+      show-fan = false;
+      update-time = 3;
       hot-sensors = [
         "_memory_usage_"
         "_processor_usage_"
@@ -44,27 +44,26 @@
         #"_battery_state_"
         #"_battery_rate_"
       ];
-    }; 
+    };
     "org/gnome/shell/extensions/hidetopbar" = {
       enable-active-window = true;
       enable-intellihide = true;
     };
     "org/gnome/shell/extensions/espresso" = {
-      show-notifications= false;
+      show-notifications = false;
     };
     "org/gnome/shell/extensions/just-perfection" = {
-      theme= true;
-      show-apps-button=false;
-      window-preview-caption=false;
-      animation=4;
+      theme = true;
+      show-apps-button = false;
+      window-preview-caption = false;
+      animation = 4;
     };
     "org/gnome/shell/extensions/pano" = {
-      history-length=50;
-      play-audio-on-copy=false;
-      send-notification-on-copy=false;
-      show-indicator=false;
-      global-shortcut=["<Super>v"];
+      history-length = 50;
+      play-audio-on-copy = false;
+      send-notification-on-copy = false;
+      show-indicator = false;
+      global-shortcut = ["<Super>v"];
     };
   };
 }
-

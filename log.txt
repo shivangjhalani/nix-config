@@ -1,0 +1,2 @@
+warning: Git tree '/home/sjay/config' is dirty
+error: interrupted by the user

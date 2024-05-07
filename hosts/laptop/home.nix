@@ -1,30 +1,33 @@
-{ self, config, pkgs, inputs, ... }:
 {
-
+  self,
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     # UserLevel
-    
+
     ../../modules/user/shell/shell.nix
     #../../modules/user/apps/neovim/nvim.nix
     ../../modules/user/apps/neovim/nixvim.nix
     #../../modules/user/apps/vscode/vscode.nix
-    ../../modules/user/apps/git/git.nix    
+    ../../modules/user/apps/git/git.nix
     ../../modules/user/apps/spicetify/spicetify.nix
     ../../modules/user/apps/firefox/firefox.nix
-    #../../modules/user/apps/nextcloud/nextcloud.nix 
+    #../../modules/user/apps/nextcloud/nextcloud.nix
     #../../modules/user/apps/unimatrix/unimatrix.nix
     ../../modules/user/apps/lazygit/lazygit.nix
     ../../modules/user/apps/btop/btop.nix
+    ../../modules/user/apps/espanso/espanso.nix
     #../../modules/user/apps/lf/lf.nix
     #../../modules/user/apps/obsidian/obsidian.nix  #Added in configuration.nix
 
-    
     # SystemLevel
     #../../modules/system/desktopenv/gnomesettings-hm.nix #ADDED IN CONFIGURATION.NIX
     ../../modules/system/desktopenv/dconf.nix
     ../../modules/system/desktopenv/gtk.nix
   ];
-
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -47,12 +50,13 @@
     #pkgs.git
     #pkgs.firefox
     #pkgs.neovim
-    #pkgs.alacritty    
-    #pkgs.powertop    
+    #pkgs.alacritty
+    #pkgs.powertop
     pkgs.vlc
     pkgs.telegram-desktop
     pkgs.ulauncher
-		pkgs.zed-editor
+    pkgs.zed-editor
+
     # Apps
 
     # # Adds the 'hello' command to your environment. It prints a friendly
@@ -70,7 +74,7 @@
     # # environment:
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
-    # 
+    #
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
