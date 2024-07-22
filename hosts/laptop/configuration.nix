@@ -11,6 +11,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../modules/system/desktopenv/gnomesettings.nix
+    ../../modules/system/desktopenv/hyprland.nix
     ../../modules/system/autologin.nix
     ../../modules/system/opengl.nix
     ../../modules/system/virtualisation/virt-manager.nix
@@ -18,6 +19,7 @@
     ../../modules/system/powermgmt/powermgmt.nix
     ../../modules/user/gaming/gaming.nix
     ../../modules/user/apps/obsidian/obsidian.nix
+    ../../modules/system/bluetooth/ps4-bluezfull.nix
   ];
 
   # Bootloader.

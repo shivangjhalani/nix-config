@@ -1,8 +1,6 @@
 {
-  self,
-  config,
   pkgs,
-  inputs,
+  lib,
   ...
 }: {
   imports = [
@@ -13,7 +11,7 @@
     ../../modules/user/apps/neovim/nixvim.nix
     #../../modules/user/apps/vscode/vscode.nix
     ../../modules/user/apps/git/git.nix
-    ../../modules/user/apps/spicetify/spicetify.nix
+    #../../modules/user/apps/spicetify/spicetify.nix
     ../../modules/user/apps/firefox/firefox.nix
     #../../modules/user/apps/nextcloud/nextcloud.nix
     #../../modules/user/apps/unimatrix/unimatrix.nix
@@ -52,10 +50,11 @@
     #pkgs.neovim
     #pkgs.alacritty
     #pkgs.powertop
+    pkgs.normcap
     pkgs.vlc
     pkgs.telegram-desktop
-    pkgs.ulauncher
-    pkgs.zed-editor
+    pkgs.spotify
+    pkgs.zoom-us
 
     # Apps
 
@@ -76,6 +75,11 @@
     #   echo "Hello, ${config.home.username}!"
     #
   ];
+
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "spotify"
+    ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
