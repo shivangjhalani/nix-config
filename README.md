@@ -12,7 +12,8 @@ _Started from scratch using : https://github.com/Misterio77/nix-starter-configs_
 5. Make changes in username and hostname as required in `flake.nix`, `configuration.nix` and `home.nix`.
 6. `nix shell nixpkgs#home-manager`
 
-> Rebuild Config: `sudo nixos-rebuild switch --flake .#hostname`
-> Home Manager: `home-manager switch --flake .#username@hostname`
+Rebuild Config: `sudo nixos-rebuild switch --flake .#hostname`
+
+Home Manager: `home-manager switch --flake .#username@hostname`
 
 ---
