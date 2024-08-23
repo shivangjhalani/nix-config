@@ -1,6 +1,6 @@
 # NIX-CONFIG
+
 ## _Started from scratch from : https://github.com/Misterio77/nix-starter-configs_
----
 
 ### Init
 
@@ -18,5 +18,5 @@ Home Manager: `home-manager switch --flake .#username@hostname`
 ---
 
 ### Features
-- [ ] 
 
+- [ ] Hello
