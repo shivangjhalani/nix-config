@@ -1,6 +1,6 @@
 # NIX-CONFIG
 
-## _Started from scratch from : https://github.com/Misterio77/nix-starter-configs_
+_Started from scratch from : https://github.com/Misterio77/nix-starter-configs_
 
 ### Init
 
