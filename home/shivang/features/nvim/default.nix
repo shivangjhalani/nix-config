@@ -16,7 +16,7 @@
 
     # You can add your NixVim configuration here
     # For example:
-    options = {
+    opts = {
       number = true;
       relativenumber = true;
       shiftwidth = 2;
