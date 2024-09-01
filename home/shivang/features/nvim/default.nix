@@ -4,22 +4,9 @@
   ...
 }: {
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
   ];
 
-  programs.nixvim = {
+  programs.neovim = {
     enable = true;
-
-    # Basic configuration
-    viAlias = true;
-    vimAlias = true;
-
-    # You can add your NixVim configuration here
-    # For example:
-    opts = {
-      number = true;
-      relativenumber = true;
-      shiftwidth = 2;
-    };
   };
 }
