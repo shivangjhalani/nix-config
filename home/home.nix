@@ -52,8 +52,11 @@
   };
 
   # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
-  # home.packages = with pkgs; [ steam ];
+  programs.neovim.enable = true;
+  home.packages = with pkgs; [
+    firefox
+    git
+  ];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
