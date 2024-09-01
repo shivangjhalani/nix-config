@@ -8,6 +8,7 @@
     # at the same time. Here's an working example:
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
+    systems.url = "github:nix-systems/default-linux";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager";
@@ -18,27 +19,26 @@
     self,
     nixpkgs,
     home-manager,
+    systems,
     ...
   } @ inputs: let
     inherit (self) outputs;
-    # Supported systems for your flake packages, shell, etc.
-    systems = [
-      #"aarch64-linux"
-      #"i686-linux"
-      "x86_64-linux"
-      #"aarch64-darwin"
-      #"x86_64-darwin"
-    ];
-    # This is a function that generates an attribute by calling a function you
-    # pass to it, with each system as an argument
-    forAllSystems = nixpkgs.lib.genAttrs systems;
+    lib = nixpkgs.lib // home-manager.lib;
+    forEachSystem = f: lib.genAttrs (import systems) (system: f pkgsFor.${system});
+    pkgsFor = lib.genAttrs (import systems) (
+      system:
+        import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        }
+    );
   in {
     # Your custom packages
     # Accessible through 'nix build', 'nix shell', etc
-    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+    packages = forEachSystem (pkgs: import ./pkgs {inherit pkgs;});
     # Formatter for your nix files, available through 'nix fmt'
     # Other options beside 'alejandra' include 'nixpkgs-fmt'
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+    formatter = forEachSystem (pkgs: pkgs.alejandra);
 
     # Your custom packages and modifications, exported as overlays
     overlays = import ./overlays {inherit inputs;};
@@ -53,20 +53,20 @@
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
       # FIXME replace with your hostname
-      swift = nixpkgs.lib.nixosSystem {
+      swift = lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
           # > Our main nixos configuration file <
           ./hosts/swift/configuration.nix
         ];
       };
-      qemu = nixpkgs.lib.nixosSystem {
+      qemu = lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./hosts/qemu/configuration.nix
         ];
       };
-      x360 = nixpkgs.lib.nixosSystem {
+      x360 = lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./hosts/x360/configuration.nix
