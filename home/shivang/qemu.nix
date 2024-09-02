@@ -2,7 +2,7 @@
   imports = [
     ./global
     #./features/desktop/hyprland
-    ./features/nvim
+    #./features/nvim
     ./features/desktop/common
   ];
 }

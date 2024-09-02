@@ -4,7 +4,7 @@
 }: {
   imports = [
     ./global
-    ./features/neovim
+    #./features/neovim
     #./features/desktop/hyprland
   ];
 }
