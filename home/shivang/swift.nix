@@ -3,8 +3,6 @@
   ...
 }: {
   imports = [
-    ./global
-    #./features/neovim
-    #./features/desktop/hyprland
+    ./common/global
   ];
 }

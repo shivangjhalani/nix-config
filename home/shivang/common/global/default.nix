@@ -8,7 +8,7 @@
 }: {
   imports =
     [
-      ../features/nvim
+      #../features/nvim
     ]
     ++ (builtins.attrValues outputs.homeManagerModules);
 
@@ -39,6 +39,5 @@
     sessionVariables = {
       FLAKE = "$HOME/Documents/NixConfig";
     };
-
   };
 }

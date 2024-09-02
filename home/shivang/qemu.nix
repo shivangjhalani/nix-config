@@ -1,8 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./global
-    #./features/desktop/hyprland
-    #./features/nvim
-    ./features/desktop/common
+    ./common/global
+    ./common/features/desktop/common
   ];
 }
