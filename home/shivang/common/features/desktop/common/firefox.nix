@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   programs.browserpass.enable = true;
   programs.firefox = {
     enable = true;

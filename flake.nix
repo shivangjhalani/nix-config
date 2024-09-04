@@ -75,10 +75,10 @@
           ./hosts/qemu/configuration.nix
         ];
       };
-      x360 = lib.nixosSystem {
+      x390 = lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          ./hosts/x360/configuration.nix
+          ./hosts/x390/configuration.nix
         ];
       };
     };
@@ -97,10 +97,10 @@
         extraSpecialArgs = {inherit inputs outputs;};
 	modules = [ ./home/shivang/qemu.nix ./home/shivang/nixpkgs.nix ];
       };
-      "shivang@x360" = home-manager.lib.homeManagerConfiguration {
+      "shivang@x390" = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgsFor.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
-	modules = [ ./home/shivang/x360.nix ./home/shivang/nixpkgs.nix ];
+	modules = [ ./home/shivang/x390.nix ./home/shivang/nixpkgs.nix ];
       };
     };
   };

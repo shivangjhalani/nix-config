@@ -133,7 +133,7 @@
   #####
 
   # TODO: Set your hostname
-  networking.hostName = "x360";
+  networking.hostName = "x390";
 
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
