@@ -21,8 +21,8 @@
       #languagePacks = [ "en-US" ];
 
 			profiles = {
-				sjay = {
-					name = "sjay";
+				shivang = {
+					name = "shivang";
 					# Custom CSS defined in userChrome.nix
 				};
 			};

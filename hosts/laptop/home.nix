@@ -29,8 +29,8 @@
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "sjay";
-  home.homeDirectory = "/home/sjay";
+  home.username = "shivang";
+  home.homeDirectory = "/home/shivang";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -50,11 +50,18 @@
     #pkgs.neovim
     #pkgs.alacritty
     #pkgs.powertop
-    pkgs.normcap
+    #pkgs.normcap
     pkgs.vlc
     pkgs.telegram-desktop
     pkgs.spotify
-    pkgs.zoom-us
+    pkgs.zed-editor
+    pkgs.libvirt-glib
+    pkgs.vivaldi
+    pkgs.motrix
+    pkgs.libreoffice-fresh
+    pkgs.vdhcoapp
+    pkgs.kdenlive
+    #pkgs.zoom-us
 
     # Apps
 
@@ -109,7 +116,7 @@
   #
   # or
   #
-  #  /etc/profiles/per-user/sjay/etc/profile.d/hm-session-vars.sh
+  #  /etc/profiles/per-user/shivang/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
     # EDITOR = "nvim";

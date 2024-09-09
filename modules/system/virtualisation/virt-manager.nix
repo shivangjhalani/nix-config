@@ -9,7 +9,7 @@
     #spiceUSBRedirection.enable = true; #IDK WHAT THIS IS
   };
 
-  users.users.sjay = {
+  users.users.shivang = {
     extraGroups = [ "networkmanager" "wheel" "libvirtd" 
       # "adbusers" #I think this is for the spiceUSBRedirection option above
     ];

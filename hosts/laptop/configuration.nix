@@ -71,7 +71,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
+  #sound.enable = true; #This option no longer has any effect
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -91,10 +91,11 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.sjay = {
+  users.users.shivang = {
     isNormalUser = true;
-    description = "sjay";
-    extraGroups = ["networkmanager" "wheel" "libvirtd"];
+    initialPassword = "1";
+    description = "shivang";
+    extraGroups = ["networkmanager" "wheel" "libvirtd" "docker"];
     packages = with pkgs; [
       #  thunderbird
     ];

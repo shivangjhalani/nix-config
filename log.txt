@@ -1,2 +1,2 @@
-warning: Git tree '/home/sjay/config' is dirty
+warning: Git tree '/home/shivang/config' is dirty
 error: interrupted by the user

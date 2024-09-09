@@ -1,6 +1,6 @@
 {
 
-	programs.firefox.profiles.sjay.userChrome = 
+	programs.firefox.profiles.shivang.userChrome = 
 ''
 	
 '';
