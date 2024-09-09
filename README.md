@@ -3,6 +3,10 @@
 https://nixos.org/learn.html
 https://sioodmy.dev/blog/nixos-guide/
 
+## Initial Install
+- `git clone https://github.com/shivangjhalani/nix-config.git && cd nix-config`
+- `nix-shell -p git --command "nix run --experimental-features 'nix-command flakes'"`
+
 ## Basic Commands
 
 In the dotfiles directory (The directory where this repo's flake.nix and home.nix is present)
