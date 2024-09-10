@@ -12,6 +12,7 @@
     #ncdu # TUI disk usage
     #eza # Better ls
     ripgrep # Better grep
+    tree
     #fd # Better find
     #httpie # Better curl
     #diffsitter # Better diff
@@ -27,6 +28,6 @@
     nix-output-monitor
     #nh # Nice wrapper for NixOS and HM
 
-    ltex-ls # Spell checking LSP
+    #ltex-ls # Spell checking LSP
   ];
 }

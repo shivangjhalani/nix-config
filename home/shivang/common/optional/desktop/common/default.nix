@@ -8,6 +8,7 @@
     #./discord.nix
     #./dragon.nix
     ./firefox.nix
+    ./kitty.nix
     #./font.nix
     #./gtk.nix
     #./kdeconnect.nix

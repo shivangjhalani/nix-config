@@ -22,7 +22,7 @@
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
-    ../common/global
+    ../common/core
   ];
 
   nixpkgs = {

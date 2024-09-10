@@ -9,8 +9,8 @@
   imports =
     [
       #../features/nvim
-      ../features/cli
-      ../features/desktop/common
+      ./nixvim
+      ./direnv.nix
 
     ]
     ++ (builtins.attrValues outputs.homeManagerModules);

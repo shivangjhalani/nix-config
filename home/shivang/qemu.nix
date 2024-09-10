@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./common/global
-    ./common/features/desktop/common
+    ./common/core
+    ./common/optional/desktop/common
   ];
 }

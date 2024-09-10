@@ -3,6 +3,9 @@
   ...
 }: {
   imports = [
-    ./common/global
+    ./common/core
+
+    ./common/optional/cli
+    ./common/optional/desktop/common
   ];
 }

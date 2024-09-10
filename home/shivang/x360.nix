@@ -3,7 +3,7 @@
   ...
 }: {
   imports = [
-    ./common/global
-    #./features/desktop/hyprland
+    ./common/core
+    #./optional/desktop/hyprland
   ];
 }
