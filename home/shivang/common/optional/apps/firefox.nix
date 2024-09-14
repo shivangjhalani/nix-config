@@ -39,7 +39,7 @@
         "browser.bookmarks.addedImportButton" = true;
 
         # Don't ask for download dir
-        "browser.download.useDownloadDir" = false;
+        "browser.download.useDownloadDir" = true;
 
         # Disable crappy home activity stream page
         "browser.newtabpage.activity-stream.feeds.topsites" = false;

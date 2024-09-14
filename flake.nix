@@ -96,17 +96,17 @@
       "shivang@swift" = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgsFor.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
-	modules = [ ./home/shivang/swift.nix ./home/shivang/nixpkgs.nix ];
+        modules = [./home/shivang/swift.nix ./home/shivang/nixpkgs.nix];
       };
       "shivang@qemu" = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgsFor.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
-	modules = [ ./home/shivang/qemu.nix ./home/shivang/nixpkgs.nix ];
+        modules = [./home/shivang/qemu.nix ./home/shivang/nixpkgs.nix];
       };
       "shivang@x390" = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgsFor.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
-	modules = [ ./home/shivang/x390.nix ./home/shivang/nixpkgs.nix ];
+        modules = [./home/shivang/x390.nix ./home/shivang/nixpkgs.nix];
       };
     };
   };

@@ -2,12 +2,12 @@
 {
   inputs,
   outputs,
+  pkgs,
   ...
 }: {
   imports =
     [
       inputs.home-manager.nixosModules.home-manager
-      ./zsh.nix
       ./nix.nix
       ./locale.nix
     ]
@@ -23,6 +23,9 @@
   home-manager.extraSpecialArgs = {
     inherit inputs outputs;
   };
+
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;

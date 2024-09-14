@@ -55,6 +55,7 @@
   programs.neovim.enable = true;
   home.packages = with pkgs; [
     firefox
+    vlc
     git
     tree
   ];

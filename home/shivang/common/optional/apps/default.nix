@@ -9,6 +9,9 @@
     #./dragon.nix
     ./firefox.nix
     ./kitty.nix
+    ./obsidian.nix
+    ./vlc.nix
+		./vivaldi.nix
     #./font.nix
     #./gtk.nix
     #./kdeconnect.nix
@@ -17,4 +20,5 @@
     #./qt.nix
     #./sublime-music.nix
   ];
+
 }
