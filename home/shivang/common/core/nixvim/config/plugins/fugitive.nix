@@ -1,7 +1,8 @@
 {
 	programs.nixvim = {
-		plugins.lazy = {
+		plugins.fugitive = {
 			enable = true;
 		};
 	};
 }
+

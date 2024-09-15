@@ -1,6 +1,6 @@
 {
 	programs.nixvim = {
-		plugins.lazy = {
+		plugins.which-key = {
 			enable = true;
 		};
 	};

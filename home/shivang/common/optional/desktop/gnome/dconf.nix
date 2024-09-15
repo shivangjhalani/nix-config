@@ -1,13 +1,9 @@
-{ lib, ... }:
-
-let
+{...}: let
   #mkTuple = lib.hm.gvariant.mkTuple;
-in
-{
+in {
   dconf.settings = {
-
     "org/gnome/shell" = {
-      favorite-apps=[ "obsidian.desktop" "kitty.desktop" "org.gnome.Nautilus.desktop" "firefox.desktop" ];
+      favorite-apps = ["obsidian.desktop" "kitty.desktop" "org.gnome.Nautilus.desktop" "vivaldi-stable.desktop"];
     };
 
     #"org/gnome/desktop/peripherals/mouse" = {
@@ -46,7 +42,7 @@ in
 
     "org/gnome/mutter" = {
       edge-tiling = true;
-      dynamic-workspaces= true;
+      dynamic-workspaces = true;
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
@@ -56,14 +52,14 @@ in
     };
 
     "org/gnome/desktop/wm/keybindings" = {
-      switch-windows=["<Alt>Tab"];
+      switch-windows = ["<Alt>Tab"];
     };
     "org/gnome/shell/keybindings" = {
-      toggle-message-tray=["<Shift><Control><Alt><Super>s"];
+      toggle-message-tray = ["<Shift><Control><Alt><Super>s"];
     };
 
     "org/gnome/desktop/sound" = {
-      event-sounds=false;
+      event-sounds = false;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
