@@ -13,5 +13,6 @@
     ./wilder.nix
     ./whichkey.nix
     ./toggleterm.nix
+    ./harpoon.nix
   ];
 }

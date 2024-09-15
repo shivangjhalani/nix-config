@@ -77,6 +77,12 @@
         key = "<Esc>";
         action = "<cmd>nohlsearch<CR>";
       }
+      {
+        mode = "n";
+        key = "<leader>hh";
+        action = "<CMD>Telescope harpoon marks<CR>";
+        options.desc = "Telescope harpoon marks";
+      }
     ];
 
     #extraConfigVim = ''

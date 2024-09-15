@@ -1,6 +1,6 @@
 {
   imports = [
-		./plugins
+    ./plugins
 
     ./vim-options.nix
   ];
