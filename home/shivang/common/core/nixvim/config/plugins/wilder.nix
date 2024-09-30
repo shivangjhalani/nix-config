@@ -1,10 +1,9 @@
 {
-	programs.nixvim = {
-		plugins.wilder = {
-			enable = true;
-      modes = [ ":" ]; # Available modes are ":" "/" "?"
+  programs.nixvim = {
+    plugins.wilder = {
+      enable = true;
+      modes = [":"]; # Available modes are ":" "/" "?"
       renderer = ''
-
         wilder.popupmenu_renderer(
           wilder.popupmenu_border_theme({
             border = 'rounded',
@@ -23,8 +22,7 @@
             },
           })
         )
-
       '';
-		};
-	};
+    };
+  };
 }

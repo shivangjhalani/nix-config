@@ -5,6 +5,7 @@
       settings = {
         options = {
           theme = "catppuccin";
+          #theme = "rose-pine";
         };
       };
     };

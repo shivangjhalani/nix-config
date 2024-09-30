@@ -1,15 +1,26 @@
-{...}: let
-  #mkTuple = lib.hm.gvariant.mkTuple;
-in {
+{ ... }:
+let
+in
+#mkTuple = lib.hm.gvariant.mkTuple;
+{
   dconf.settings = {
     "org/gnome/shell" = {
-      favorite-apps = ["obsidian.desktop" "kitty.desktop" "org.gnome.Nautilus.desktop" "vivaldi-stable.desktop"];
+      favorite-apps = [
+        "obsidian.desktop"
+        "kitty.desktop"
+        "org.gnome.Nautilus.desktop"
+        "vivaldi-stable.desktop"
+      ];
     };
 
     #"org/gnome/desktop/peripherals/mouse" = {
     #  "natural-scroll" = false;
     #  "speed" = -0.5;
     #};
+
+    "org/gnome/desktop/wm/preferences" = {
+      resize-with-right-button = true;
+    };
 
     "org/gnome/desktop/peripherals/touchpad" = {
       tap-to-click = true;
@@ -52,10 +63,10 @@ in {
     };
 
     "org/gnome/desktop/wm/keybindings" = {
-      switch-windows = ["<Alt>Tab"];
+      switch-windows = [ "<Alt>Tab" ];
     };
     "org/gnome/shell/keybindings" = {
-      toggle-message-tray = ["<Shift><Control><Alt><Super>s"];
+      toggle-message-tray = [ "<Shift><Control><Alt><Super>s" ];
     };
 
     "org/gnome/desktop/sound" = {

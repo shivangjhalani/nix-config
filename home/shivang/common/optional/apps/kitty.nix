@@ -14,18 +14,19 @@
       enable_audio_bell = false;
       hide_window_decorations = true;
     };
-    theme = "Catppuccin-Macchiato";
+    #theme = "Rosé Pine Moon";
+    theme = "Catppuccin-Mocha";
     keybindings = {
       "kitty_mod+x" = "toggle_layout stack";
     };
     # extraConfig also writes the string directly to kitty.cong
     extraConfig = ''
-map kitty_mod+enter launch --cwd=current --type=window
-#map kitty_mod+t     launch --cwd=current --type=tab
+      map kitty_mod+enter launch --cwd=current --type=window
+      #map kitty_mod+t     launch --cwd=current --type=tab
 
-tab_bar_style		powerline
-tab_title_max_length 	18
-tab_title_template 	"{index}:{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{title}"
+      tab_bar_style		powerline
+      tab_title_max_length 	18
+      tab_title_template 	"{index}:{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{title}"
     '';
   };
 }

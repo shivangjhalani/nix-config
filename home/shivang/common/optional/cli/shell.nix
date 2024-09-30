@@ -11,11 +11,11 @@ with lib; let
     c = "clear";
   };
 in {
-#programs.bash = {
-#   enable = true;
-#    enableCompletion = true;
-#    shellAliases = myAliases;
-#  };
+  #programs.bash = {
+  #   enable = true;
+  #    enableCompletion = true;
+  #    shellAliases = myAliases;
+  #  };
 
   programs.zsh = {
     enable = true;
@@ -43,6 +43,15 @@ in {
         };
         file = "Catppuccin-mocha.tmTheme";
       };
+      rose-pine-moon = {
+        src = pkgs.fetchFromGitHub {
+          owner = "rose-pine";
+          repo = "tm-theme"; # Bat uses sublime syntax for its themes
+          rev = "c4235f9a65fd180ac0f5e4396e3a86e21a0884ec";
+          sha256 = "6WVKQErGdaqb++oaXnY3i6/GuH2FhTgK0v4TN4Y0Wbw=";
+        };
+        file = "rose-pine-moon.tmTheme";
+      };
     };
     config = {
       theme = "Catppuccin-mocha";
@@ -63,6 +72,7 @@ in {
       #"--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
       #"--preview 'bat --color=always --style=header,grid --line-range :300 {}'"
     ];
+    # Catpuccin
     colors = {
       "bg+" = "#313244";
       bg = "#1e1e2e";
@@ -79,5 +89,22 @@ in {
       prompt = "#cba6f7";
       "hl+" = "#f38ba8";
     };
+    # rose-pine-moon
+    # colors = {
+    #   fg = "#908caa";
+    #   bg = "#232136";
+    #   hl = "#ea9a97";
+    #   "fg+" = "#e0def4";
+    #   "bg+" = "#393552";
+    #   "hl+" = "#ea9a97";
+    #   border = "#44415a";
+    #   header = "#3e8fb0";
+    #   gutter = "#232136";
+    #   spinner = "#f6c177";
+    #   info = "#9ccfd8";
+    #   pointer = "#c4a7e7";
+    #   marker = "#eb6f92";
+    #   prompt = "#908caa";
+    # };
   };
 }

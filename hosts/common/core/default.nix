@@ -4,14 +4,16 @@
   outputs,
   pkgs,
   ...
-}: {
-  imports =
-    [
-      inputs.home-manager.nixosModules.home-manager
-      ./nix.nix
-      ./locale.nix
-    ]
-    ++ (builtins.attrValues outputs.nixosModules);
+}:
+{
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+    ./nix.nix
+    ./locale.nix
+
+    (import ./nix-alien.nix { inherit inputs; })
+
+  ] ++ (builtins.attrValues outputs.nixosModules);
 
   security.sudo.extraConfig = ''
     Defaults timestamp_timeout=120 # only ask for password every 2h

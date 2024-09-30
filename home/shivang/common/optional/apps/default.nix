@@ -1,8 +1,4 @@
 {
-  pkgs,
-  config,
-  ...
-}: {
   imports = [
     #./deluge.nix
     #./discord.nix
@@ -11,7 +7,13 @@
     ./kitty.nix
     ./obsidian.nix
     ./vlc.nix
-		./vivaldi.nix
+    ./vivaldi.nix
+    ./libreoffice.nix
+    ./telegram.nix
+    ./bottles.nix
+    ./prismlauncher.nix
+    ./motrix.nix
+    ./obs.nix
     #./font.nix
     #./gtk.nix
     #./kdeconnect.nix
@@ -20,5 +22,4 @@
     #./qt.nix
     #./sublime-music.nix
   ];
-
 }

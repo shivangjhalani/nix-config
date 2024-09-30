@@ -1,3 +1,4 @@
+#CURRENTLY CLASHES WITH CMP
 {
   programs.nixvim = {
     plugins.lspkind = {

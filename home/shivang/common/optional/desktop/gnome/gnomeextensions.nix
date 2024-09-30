@@ -1,6 +1,8 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     gnome-extension-manager
+    gnome.gnome-tweaks
 
     gnomeExtensions.espresso
     gnomeExtensions.vitals
@@ -15,7 +17,7 @@
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
-      disabled-extensions = ["disabled"];
+      disabled-extensions = [ "disabled" ];
       enabled-extensions = [
         #"native-window-placement@gnome-shell-extensions.gcampax.github.com"
         #"pop-shell@system76.com"
@@ -61,7 +63,7 @@
       play-audio-on-copy = false;
       send-notification-on-copy = false;
       show-indicator = false;
-      global-shortcut = ["<Super>v"];
+      global-shortcut = [ "<Super>v" ];
     };
   };
 }

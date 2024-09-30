@@ -11,7 +11,7 @@
           "3" = "<leader>h3";
           "4" = "<leader>h4";
         };
-        #toggleQuickMenu = "<leader>hh";
+        toggleQuickMenu = "<leader>hh";
       };
     };
   };

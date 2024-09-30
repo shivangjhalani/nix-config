@@ -11,6 +11,7 @@
           eslint.enable = true;
           html.enable = true;
           cssls.enable = true;
+          ts-ls.enable = true;
         };
         keymaps.lspBuf = {
           "gd" = "definition";

@@ -2,6 +2,6 @@
   imports = [
     ./cmp.nix
     ./autopairs.nix
-    ./lspkind.nix
+    #./lspkind.nix #clashes rn
   ];
 }
