@@ -18,6 +18,12 @@ in
     #  "speed" = -0.5;
     #};
 
+    # DONE for libvirt.nix
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
+    };
+
     "org/gnome/desktop/wm/preferences" = {
       resize-with-right-button = true;
     };

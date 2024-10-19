@@ -3,14 +3,17 @@
   lib,
   ...
 }:
-with lib; let
+with lib;
+let
   # My shell aliases
   myAliases = {
     #cat = "bat";
     v = "nvim";
     c = "clear";
+    #ssh = "kitten ssh";
   };
-in {
+in
+{
   #programs.bash = {
   #   enable = true;
   #    enableCompletion = true;
@@ -26,9 +29,27 @@ in {
     history = {
       size = 100000;
       save = 100000;
+      ignoreAllDups = true;
+      ignorePatterns = [
+        "rm *"
+        "pkill *"
+        "cp *"
+      ];
     };
     syntaxHighlighting.enable = true;
     shellAliases = myAliases;
+
+    initExtra = ''
+      function y() {
+        local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+        yazi "$@" --cwd-file="$tmp"
+        if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+          builtin cd -- "$cwd"
+        fi
+        rm -f -- "$tmp"
+      }
+    '';
+
   };
 
   programs.bat = {

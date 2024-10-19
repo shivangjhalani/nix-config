@@ -11,7 +11,7 @@
     ./nix.nix
     ./locale.nix
 
-    (import ./nix-alien.nix { inherit inputs; })
+    (import ./nix-alien.nix inputs)
 
   ] ++ (builtins.attrValues outputs.nixosModules);
 

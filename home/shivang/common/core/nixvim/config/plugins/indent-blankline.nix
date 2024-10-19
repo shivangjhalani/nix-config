@@ -4,7 +4,7 @@
       indent-blankline = {
         enable = true;
         settings = {
-          # indent.char = "▎";
+          #indent.char = "▎";
           scope.enabled = false;
         };
       };

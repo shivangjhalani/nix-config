@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     gnome-extension-manager
-    gnome.gnome-tweaks
+    gnome-tweaks
 
     gnomeExtensions.espresso
     gnomeExtensions.vitals

@@ -14,5 +14,7 @@
     ./whichkey.nix
     ./toggleterm.nix
     ./harpoon.nix
+    ./neotree.nix
+    #./stay-centered.nix
   ];
 }

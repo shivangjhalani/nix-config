@@ -11,6 +11,7 @@
     ./libreoffice.nix
     ./telegram.nix
     ./bottles.nix
+    ./mpv.nix
     ./prismlauncher.nix
     ./motrix.nix
     ./obs.nix

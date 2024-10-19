@@ -5,6 +5,7 @@
     ./shell.nix
     ./starship.nix
     ./yazi.nix
+    ./neofetch.nix
   ];
   home.packages = with pkgs; [
     #comma # Install and run programs by sticking a , before them

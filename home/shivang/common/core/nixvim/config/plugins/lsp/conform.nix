@@ -2,7 +2,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   programs.nixvim = {
     extraConfigLuaPre =
       # lua
@@ -42,81 +43,56 @@
     plugins.conform-nvim = {
       enable = true;
       settings = {
-        # format_on_save = ''
-        #   function(bufnr)
-        #     if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-        #       return
-        #     end
-        #
-        #     if slow_format_filetypes[vim.bo[bufnr].filetype] then
-        #       return
-        #     end
-        #
-        #     local function on_format(err)
-        #       if err and err:match("timeout$") then
-        #         slow_format_filetypes[vim.bo[bufnr].filetype] = true
-        #       end
-        #     end
-        #
-        #     return { timeout_ms = 200, lsp_fallback = true }, on_format
-        #    end
-        # '';
-        #
-        # format_after_save = ''
-        #   function(bufnr)
-        #     if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-        #       return
-        #     end
-        #
-        #     if not slow_format_filetypes[vim.bo[bufnr].filetype] then
-        #       return
-        #     end
-        #
-        #     return { lsp_fallback = true }
-        #   end
-        # '';
         notify_on_error = true;
         formatters_by_ft = {
           html = [
             [
               "prettierd"
-              "prettier"
             ]
           ];
           css = [
             [
               "prettierd"
-              "prettier"
             ]
           ];
           javascript = [
             [
               "prettierd"
-              "prettier"
+              "eslint_d"
+            ]
+          ];
+          javascriptreact = [
+            [
+              "prettierd"
+              "eslint_d"
             ]
           ];
           typescript = [
             [
               "prettierd"
-              "prettier"
+              "eslint_d"
+            ]
+          ];
+          typescriptreact = [
+            [
+              "prettierd"
+              "eslint_d"
             ]
           ];
           python = [
             "black"
             "isort"
           ];
-          lua = ["stylua"];
-          nix = ["alejandra"];
+          lua = [ "stylua" ];
+          nix = [ "alejandra" ];
           markdown = [
             [
               "prettierd"
-              "prettier"
             ]
           ];
           yaml = [
             [
               "prettierd"
-              "prettier"
             ]
           ];
           bash = [
@@ -124,8 +100,9 @@
             "shellharden"
             "shfmt"
           ];
-          json = ["jq"];
-          "_" = ["trim_whitespace"];
+          json = [ "prettierd" ];
+          "_" = [ "trim_whitespace" ];
+          "*" = [ "codespell" ];
         };
 
         formatters = {
@@ -143,6 +120,7 @@
           };
           prettierd = {
             command = "${lib.getExe pkgs.prettierd}";
+            args = ["--stdin-filepath" "$FILENAME" "--single-attribute-per-line"];
           };
           stylua = {
             command = "${lib.getExe pkgs.stylua}";
@@ -156,9 +134,12 @@
           shellharden = {
             command = "${lib.getExe pkgs.shellharden}";
           };
-          #yamlfmt = {
-          #  command = "${lib.getExe pkgs.yamlfmt}";
-          #};
+          eslint_d = {
+            command = "${lib.getExe pkgs.eslint_d}";
+          };
+          codespell = {
+            command = "${lib.getExe pkgs.codespell}";
+          };
         };
       };
     };

@@ -1,13 +1,16 @@
 { pkgs, ... }:
 {
-	programs.nixvim = {
+  programs.nixvim = {
     plugins.treesitter = {
       enable = true;
       nixGrammars = true;
+      folding = true;
       grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
         c
         go
-        html css javascript
+        html
+        css
+        javascript
         markdown
         nix
 
@@ -26,7 +29,7 @@
         auto_install = true;
         # Highlight currently set to false, see if smth else also highlights, if no then enable this
         highlight = {
-          enable = false;
+          enable = true;
           #disable = ''
           #  function(lang, buf)
           #      local max_filesize = 100 * 1024 -- 100 KB
@@ -40,6 +43,5 @@
         };
       };
     };
-	};
+  };
 }
-

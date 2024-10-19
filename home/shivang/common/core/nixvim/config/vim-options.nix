@@ -36,10 +36,10 @@
       relativenumber = true;
 
       # Folding
-      foldenable = false;
       foldmethod = "expr";
-      #foldexpr= "v:lua.vim.treesitter.foldexpr()";
-      #foldtext = "v:lua.vim.treesitter.foldtext()";
+      foldexpr = "nvim_treesitter#foldexpr()";
+      foldenable = false; # Disable folding by default
+      foldlevel = 99; # Open all folds by default
 
       # Indentation
       autoindent = true;
@@ -49,7 +49,7 @@
       tabstop = 2;
       expandtab = true;
 
-      scrolloff = 8;
+      scrolloff = 8; # stay-centered
 
       # Performance
       shell = "zsh";
@@ -68,6 +68,7 @@
       list = true;
       listchars = {
         tab = "» ";
+        #tab = "▎";
         trail = "·";
         nbsp = "␣";
       };
@@ -82,16 +83,20 @@
 
     keymaps = [
       {
-        # Format file
         key = "<leader>fm";
-        action = "<CMD>lua vim.lsp.buf.format()<CR>";
-        options.desc = "Format the current buffer";
+        action = "<CMD>lua vim.lsp.buf.format({ async = true})<CR>";
+        options.desc = "Format the current file";
+        # key = "<leader>fm";
+        # action = "<CMD>lua vim.lsp.buf.format()<CR>";
+        # options.desc = "Format the current buffer";
       }
+
       {
         mode = "n";
         key = "<Esc>";
         action = "<cmd>nohlsearch<CR>";
       }
+      # Added in harpoon config
       # {
       #   mode = "n";
       #   key = "<leader>hh";
