@@ -10,7 +10,8 @@
     inputs.home-manager.nixosModules.home-manager
     ./nix.nix
     ./locale.nix
-    ./desktop.nix
+    ./gnome.nix
+    ./hyprland.nix
 
     (import ./nix-alien.nix inputs)
 
