@@ -10,6 +10,7 @@
     inputs.home-manager.nixosModules.home-manager
     ./nix.nix
     ./locale.nix
+    ./desktop.nix
 
     (import ./nix-alien.nix inputs)
 

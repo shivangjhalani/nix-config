@@ -15,6 +15,7 @@
     ./toggleterm.nix
     ./harpoon.nix
     ./neotree.nix
+    ./webdevicons.nix
     #./stay-centered.nix
   ];
 }

@@ -12,6 +12,8 @@
     #gnomeExtensions.dash-to-dock
     #gnomeExtensions.pano
     gnomeExtensions.appindicator
+    gnomeExtensions.rounded-window-corners-reborn
+    gnomeExtensions.clipboard-indicator
   ];
 
   dconf.settings = {
@@ -31,6 +33,8 @@
         #"dash-to-dock@micxgx.gmail.com"
         #"pano@elhan.io"
         "appindicatorsupport@rgcjonas.gmail.com"
+        "rounded-window-corners@fxgn"
+        "clipboard-indicator@tudmotu.com"
       ];
     };
 
@@ -58,12 +62,17 @@
       window-preview-caption = false;
       animation = 4;
     };
-    "org/gnome/shell/extensions/pano" = {
-      history-length = 50;
-      play-audio-on-copy = false;
-      send-notification-on-copy = false;
-      show-indicator = false;
-      global-shortcut = [ "<Super>v" ];
+    # "org/gnome/shell/extensions/pano" = {
+    #   history-length = 50;
+    #   play-audio-on-copy = false;
+    #   send-notification-on-copy = false;
+    #   show-indicator = false;
+    #   global-shortcut = [ "<Super>v" ];
+    # };
+    "org/gnome/shell/extensions/clipboard-indicator" = {
+      cache-size = 100;
+      history-size = 100;
+      toggle-menu = [ "<Super>v" ];
     };
   };
 }

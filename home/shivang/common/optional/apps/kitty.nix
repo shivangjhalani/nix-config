@@ -12,10 +12,13 @@
       background_opacity = "0.95";
       scrollback_lines = 10000;
       enable_audio_bell = false;
+      allow_remote_control = true;
       hide_window_decorations = true;
+      draw-minimal-borders = true;
     };
     #theme = "Rosé Pine Moon";
-    theme = "Catppuccin-Mocha";
+    themeFile = "Catppuccin-Mocha";
+    # theme = "Catppuccin-Mocha";
     keybindings = {
       "kitty_mod+x" = "toggle_layout stack";
     };
@@ -27,6 +30,8 @@
       tab_bar_style		powerline
       tab_title_max_length 	18
       tab_title_template 	"{index}:{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{title}"
+
+      map f1 launch --allow-remote-control kitty +kitten broadcast
     '';
   };
 }

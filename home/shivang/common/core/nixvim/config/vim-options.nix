@@ -78,7 +78,7 @@
       mapleader = ";";
       maplocalleader = ";";
 
-      have_nerd_font = false;
+      have_nerd_font = true;
     };
 
     keymaps = [
@@ -96,6 +96,17 @@
         key = "<Esc>";
         action = "<cmd>nohlsearch<CR>";
       }
+      {
+        mode = "v";
+        key = "<leader>p";
+        action = "\"_dP";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Delete into black hole and paste";
+        };
+      }
+
       # Added in harpoon config
       # {
       #   mode = "n";
