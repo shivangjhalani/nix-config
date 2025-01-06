@@ -16,6 +16,9 @@
     ./harpoon.nix
     ./neotree.nix
     ./webdevicons.nix
-    #./stay-centered.nix
+    ./copilot.nix
+    ./stay-centered.nix
+    ./undrotree.nix
+    # ./neoscroll.nix
   ];
 }

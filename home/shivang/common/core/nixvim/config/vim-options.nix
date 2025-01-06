@@ -86,9 +86,6 @@
         key = "<leader>fm";
         action = "<CMD>lua vim.lsp.buf.format({ async = true})<CR>";
         options.desc = "Format the current file";
-        # key = "<leader>fm";
-        # action = "<CMD>lua vim.lsp.buf.format()<CR>";
-        # options.desc = "Format the current buffer";
       }
 
       {
@@ -106,14 +103,52 @@
           desc = "Delete into black hole and paste";
         };
       }
-
-      # Added in harpoon config
-      # {
-      #   mode = "n";
-      #   key = "<leader>hh";
-      #   action = "<CMD>Telescope harpoon marks<CR>";
-      #   options.desc = "Telescope harpoon marks";
-      # }
+      {
+        mode = "n";
+        key = "<leader>dd";
+        action = "\"_dd";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Delete line to black hole in normal mode";
+        };
+      }
+      {
+        mode = "v";
+        key = "<leader>dd";
+        action = "\"_d";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Delete selection to black hole in visual mode";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>ct";
+        action = "<cmd>CopilotChatToggle<CR>";
+        options = {
+          desc = "CopilotChatToggle";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>cr";
+        action = "<cmd>CopilotChatReset<CR>";
+        options = {
+          desc = "CopilotChatReset";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-u>";
+        action = "<C-u>zz";
+      }
+      {
+        mode = "n";
+        key = "<C-d>";
+        action = "<C-d>zz";
+      }
     ];
 
     #extraConfigVim = ''

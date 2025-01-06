@@ -3,22 +3,24 @@
 
   inputs = {
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs";
     # You can access packages and modules from different nixpkgs revs
     # at the same time. Here's an working example:
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
     systems.url = "github:nix-systems/default";
+    ghostty.url = "github:ghostty-org/ghostty";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    sops-nix = {
-      url = "github:mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nixpkgs-stable.follows = "nixpkgs";
-    };
+    # sops-nix = {
+    #   url = "github:mic92/sops-nix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.nixpkgs-stable.follows = "nixpkgs";
+    # };
 
     nix-colors.url = "github:misterio77/nix-colors";
 

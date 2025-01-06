@@ -36,6 +36,10 @@
     ripgrep
     tree
     fd
+    figlet
+    lolcat
+    cowsay
+    unzip
 
     #ltex-ls # Spell checking LSP
   ];

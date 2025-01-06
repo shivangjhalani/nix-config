@@ -4,6 +4,11 @@
     gnome-extension-manager
     gnome-tweaks
 
+    # GNOME APPS
+    gnome-podcasts
+    resources
+    gnome-solanum
+
     gnomeExtensions.espresso
     gnomeExtensions.vitals
     gnomeExtensions.blur-my-shell
@@ -14,6 +19,7 @@
     gnomeExtensions.appindicator
     gnomeExtensions.rounded-window-corners-reborn
     gnomeExtensions.clipboard-indicator
+    gnomeExtensions.cronomix
   ];
 
   dconf.settings = {
@@ -35,6 +41,7 @@
         "appindicatorsupport@rgcjonas.gmail.com"
         "rounded-window-corners@fxgn"
         "clipboard-indicator@tudmotu.com"
+        "cronomix@zagortenay333"
       ];
     };
 

@@ -96,13 +96,12 @@
     LC_TIME = "en_IN";
   };
 
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Enable sound with pipewire.
   #sound.enable = true; #This option no longer has any effect
-  hardware.pulseaudio.enable =  false;
+  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = lib.mkForce true;

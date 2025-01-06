@@ -1,0 +1,62 @@
+# Functionality
+gtk-tabs-location = hidden
+scrollback-limit = 10000
+clipboard-read = allow
+clipboard-paste-protection = false
+shell-integration = zsh
+window-inherit-working-directory = true
+window-save-state = always
+window-new-tab-position = end
+
+# Font
+font-size = 12
+
+# Looks
+window-theme = ghostty
+background-opacity = 0.9
+background-blur-radius = 20
+theme = catppuccin-mocha
+window-decoration = false
+window-padding-balance = true 
+resize-overlay = never
+unfocused-split-opacity = 1
+
+mouse-hide-while-typing = true
+
+#### KEYBINDSSS
+# Tab Management
+keybind=ctrl+shift+t=new_tab
+keybind=ctrl+shift+left=previous_tab
+keybind=ctrl+shift+right=next_tab
+keybind=ctrl+shift+1=goto_tab:1
+keybind=ctrl+shift+2=goto_tab:2
+keybind=ctrl+shift+3=goto_tab:3
+keybind=ctrl+shift+4=goto_tab:4
+keybind=ctrl+shift+5=goto_tab:5
+keybind=ctrl+shift+6=goto_tab:6
+keybind=ctrl+shift+7=goto_tab:7
+keybind=ctrl+shift+8=goto_tab:8
+keybind=ctrl+shift+9=goto_tab:9
+keybind=ctrl+shift+0=last_tab
+
+# Split Creation in Different Directions
+keybind=ctrl+shift+h=new_split:left
+keybind=ctrl+shift+j=new_split:down
+keybind=ctrl+shift+k=new_split:up
+keybind=ctrl+shift+l=new_split:right
+
+# Split Management
+keybind=ctrl+shift+[=goto_split:left
+keybind=ctrl+shift+]=goto_split:right
+
+# # Split Resizing
+# keybind=ctrl+alt+left=resize_split:left
+# keybind=ctrl+alt+right=resize_split:right
+# keybind=ctrl+alt+up=resize_split:up
+# keybind=ctrl+alt+down=resize_split:down
+
+# Split Zoom Toggle
+keybind=ctrl+shift+x=toggle_split_zoom
+
+# Tab Overview (if using libadwaita)
+keybind=ctrl+shift+o=toggle_tab_overview

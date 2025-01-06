@@ -7,7 +7,7 @@ in
     "org/gnome/shell" = {
       favorite-apps = [
         "obsidian.desktop"
-        "kitty.desktop"
+        "com.mitchellh.ghostty.desktop"
         "org.gnome.Nautilus.desktop"
         "vivaldi-stable.desktop"
       ];
@@ -80,9 +80,9 @@ in
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      name = "kitty";
+      name = "ghostty";
       binding = "<Control>Return";
-      command = "/usr/bin/env kitty";
+      command = "/usr/bin/env ghostty";
     };
   };
 }

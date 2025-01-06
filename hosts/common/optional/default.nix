@@ -2,10 +2,10 @@
   inputs,
   outputs,
   ...
-}: {
-  imports =
-    [
-      #../features/nvim
-      ./virtualisation
-    ];
+}:
+{
+  imports = [
+    #../features/nvim
+    ./virtualisation
+  ];
 }

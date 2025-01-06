@@ -30,7 +30,7 @@
 
       cmp = {
         enable = true;
-
+        autoEnableSources = true;
         settings = {
           experimental = {
             ghost_text = false;
@@ -41,6 +41,7 @@
             end
           '';
           sources = [
+            { name = "copilot"; }
             { name = "nvim_lsp"; }
             { name = "luasnip"; }
             {

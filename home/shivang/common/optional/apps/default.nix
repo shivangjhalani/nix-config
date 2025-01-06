@@ -5,6 +5,7 @@
     #./dragon.nix
     ./firefox.nix
     ./kitty.nix
+    ./ghostty.nix
     ./obsidian.nix
     ./vlc.nix
     ./vivaldi.nix
@@ -15,6 +16,12 @@
     ./prismlauncher.nix
     ./motrix.nix
     ./obs.nix
+    ./spotify.nix
+    ./flameshot.nix
+
+    ./cursor.nix
+    ./vscode.nix
+    ./zed.nix
     #./font.nix
     #./gtk.nix
     #./kdeconnect.nix

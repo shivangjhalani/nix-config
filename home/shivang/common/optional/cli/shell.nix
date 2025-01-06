@@ -10,7 +10,7 @@ let
     #cat = "bat";
     v = "nvim";
     c = "clear";
-    #ssh = "kitten ssh";
+    ssh = "kitten ssh";
   };
 in
 {
@@ -63,15 +63,6 @@ in
           sha256 = "6WVKQErGdaqb++oaXnY3i6/GuH2FhTgK0v4TN4Y0Wbw=";
         };
         file = "Catppuccin-mocha.tmTheme";
-      };
-      rose-pine-moon = {
-        src = pkgs.fetchFromGitHub {
-          owner = "rose-pine";
-          repo = "tm-theme"; # Bat uses sublime syntax for its themes
-          rev = "c4235f9a65fd180ac0f5e4396e3a86e21a0884ec";
-          sha256 = "6WVKQErGdaqb++oaXnY3i6/GuH2FhTgK0v4TN4Y0Wbw=";
-        };
-        file = "rose-pine-moon.tmTheme";
       };
     };
     config = {
