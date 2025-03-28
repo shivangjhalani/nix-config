@@ -45,9 +45,11 @@ in {
     };
     userName = "shivangjhalani";
     userEmail = lib.mkDefault "shivang2004jhalani@gmail.com";
+    # userName = "shreshtha-dixit";
+    # userEmail = lib.mkDefault "shreshtha.dixit.511@gmail.com";
     extraConfig = {
       init.defaultBranch = "main";
-      #user.signing.key = "CE707A2C17FAAC97907FF8EF2E54EA7BFE630916";
+      #user.signing.key = "CE707A9C17FAAC97907FF8EF2E61EA7BFE630927";
       #commit.gpgSign = lib.mkDefault true;
       #gpg.program = "${config.programs.gpg.package}/bin/gpg2";
 

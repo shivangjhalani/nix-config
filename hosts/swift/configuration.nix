@@ -77,6 +77,12 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking = {
+    firewall = {
+      allowedTCPPorts = [ 1716 ];  # Or use lib.range 1714 1764 for full range
+      allowedUDPPorts = [ 1716 ];  # Or use a range if preferred
+    };
+  };
 
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
@@ -101,7 +107,7 @@
 
   # Enable sound with pipewire.
   #sound.enable = true; #This option no longer has any effect
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = lib.mkForce true;

@@ -10,7 +10,6 @@ let
     #cat = "bat";
     v = "nvim";
     c = "clear";
-    ssh = "kitten ssh";
   };
 in
 {

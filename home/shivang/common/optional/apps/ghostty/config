@@ -14,9 +14,9 @@ font-size = 12
 # Looks
 window-theme = ghostty
 background-opacity = 0.9
-background-blur-radius = 20
+background-blur = 20
 theme = catppuccin-mocha
-window-decoration = false
+window-decoration = none
 window-padding-balance = true 
 resize-overlay = never
 unfocused-split-opacity = 1

@@ -18,8 +18,10 @@
     ./obs.nix
     ./spotify.nix
     ./flameshot.nix
+    # ./nomachine-client.nix
+    # ./kde-connect.nix
 
-    ./cursor.nix
+    # ./cursor.nix
     ./vscode.nix
     ./zed.nix
     #./font.nix

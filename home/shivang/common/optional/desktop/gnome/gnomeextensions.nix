@@ -19,7 +19,8 @@
     gnomeExtensions.appindicator
     gnomeExtensions.rounded-window-corners-reborn
     gnomeExtensions.clipboard-indicator
-    gnomeExtensions.cronomix
+    #gnomeExtensions.cronomix
+    gnomeExtensions.gsconnect
   ];
 
   dconf.settings = {
@@ -41,7 +42,8 @@
         "appindicatorsupport@rgcjonas.gmail.com"
         "rounded-window-corners@fxgn"
         "clipboard-indicator@tudmotu.com"
-        "cronomix@zagortenay333"
+        #"cronomix@zagortenay333"
+        "gsconnect@andyholmes.github.io"
       ];
     };
 

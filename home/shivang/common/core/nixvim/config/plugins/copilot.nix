@@ -3,8 +3,6 @@
   programs.nixvim = {
     plugins.copilot-lua = {
       enable = true;
-      suggestion.enabled = false;
-      panel.enabled = false;
     };
 
     plugins.copilot-cmp = {
@@ -14,6 +12,8 @@
     plugins.copilot-chat = {
       enable = true;
       settings = {
+        suggestion.enabled = false;
+        panel.enabled = false;
         answer_header = "## Copilot ";
         question_header = "## User ";
         error_header = "## Error ";
