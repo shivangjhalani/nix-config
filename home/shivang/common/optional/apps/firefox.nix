@@ -5,15 +5,15 @@
     profiles.shivang = {
       search = {
         force = true;
-        default = "DuckDuckGo";
-        privateDefault = "DuckDuckGo";
-        order = ["Kagi" "DuckDuckGo" "Google"];
+        default = "ddg";
+        privateDefault = "ggd";
+        order = ["kagi" "ddg" "google"];
         engines = {
-          "Kagi" = {
+          "kagi" = {
             urls = [{template = "https://kagi.com/search?q={searchTerms}";}];
-            iconUpdateURL = "https://kagi.com/favicon.ico";
+            icon = "https://kagi.com/favicon.ico";
           };
-          "Bing".metaData.hidden = true;
+          "bing".metaData.hidden = true;
         };
       };
       bookmarks = {};

@@ -13,7 +13,7 @@
       scrollback_lines = 10000;
       enable_audio_bell = false;
       allow_remote_control = true;
-      hide_window_decorations = true;
+      hide_window_decorations = false;
       draw-minimal-borders = true;
     };
     #theme = "Rosé Pine Moon";

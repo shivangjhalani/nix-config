@@ -12,6 +12,7 @@
     plugins.copilot-chat = {
       enable = true;
       settings = {
+        model = "claude-3.5-sonnet";
         suggestion.enabled = false;
         panel.enabled = false;
         answer_header = "## Copilot ";
@@ -28,28 +29,41 @@
             normal = "q";
           };
           complete = {
-            detail = "Use @<Tab> or /<Tab> for options.";
             insert = "<Tab>";
+          };
+          jump_to_diff = {
+            normal = "gj";
+          };
+          quickfix_diffs = {
+            normal = "gq";
           };
           reset = {
             insert = "<C-l>";
             normal = "<C-l>";
           };
+          show_context = {
+            normal = "gc";
+          };
           show_diff = {
             normal = "gd";
           };
-          show_system_prompt = {
-            normal = "gp";
+          show_help = {
+            normal = "gh";
           };
-          show_user_selection = {
-            normal = "gs";
+          show_info = {
+            normal = "gi";
           };
           submit_prompt = {
-            insert = "<C-m>";
+            insert = "<C-s>";
             normal = "<CR>";
+          };
+          toggle_sticky = {
+            detail = "Makes line under cursor sticky or deletes sticky line.";
+            normal = "gr";
           };
           yank_diff = {
             normal = "gy";
+            register = "\"";
           };
         };
         prompts = {

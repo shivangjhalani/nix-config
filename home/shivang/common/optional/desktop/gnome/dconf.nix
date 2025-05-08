@@ -9,7 +9,7 @@ in
         "obsidian.desktop"
         "com.mitchellh.ghostty.desktop"
         "org.gnome.Nautilus.desktop"
-        "vivaldi-stable.desktop"
+        "zen.desktop"
       ];
     };
 

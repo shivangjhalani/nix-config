@@ -1,9 +1,9 @@
 {
   imports = [
     #./deluge.nix
-    #./discord.nix
     #./dragon.nix
     ./firefox.nix
+    ./discord.nix
     ./kitty.nix
     ./ghostty.nix
     ./obsidian.nix
@@ -21,9 +21,10 @@
     # ./nomachine-client.nix
     # ./kde-connect.nix
 
-    # ./cursor.nix
+    ./cursor.nix
     ./vscode.nix
     ./zed.nix
+    ./zen-browser.nix
     #./font.nix
     #./gtk.nix
     #./kdeconnect.nix

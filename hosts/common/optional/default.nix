@@ -7,5 +7,6 @@
   imports = [
     #../features/nvim
     ./virtualisation
+    ./steam
   ];
 }
