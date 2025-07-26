@@ -12,8 +12,9 @@
     ./locale.nix
     ./gnome.nix
     ./hyprland.nix
+    ./nix-ld.nix
 
-    (import ./nix-alien.nix inputs)
+    # (import ./nix-alien.nix inputs)
 
   ] ++ (builtins.attrValues outputs.nixosModules);
 

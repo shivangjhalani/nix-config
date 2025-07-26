@@ -1,4 +1,3 @@
-# https://github.com/CopilotC-Nvim/CopilotChat.nvim/
 {
   programs.nixvim = {
     plugins.copilot-lua = {
@@ -10,7 +9,7 @@
     };
 
     plugins.copilot-chat = {
-      enable = true;
+      enable = false;
       settings = {
         model = "claude-3.5-sonnet";
         suggestion.enabled = false;

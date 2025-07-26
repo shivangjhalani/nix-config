@@ -41,6 +41,15 @@
     lolcat
     cowsay
     unzip
+    wget
+
+    openvpn
+    sshpass
+    lsof
+
+    jq
+
+    nix-index
 
     #ltex-ls # Spell checking LSP
   ];

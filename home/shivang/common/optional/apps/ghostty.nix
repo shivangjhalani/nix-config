@@ -1,13 +1,8 @@
+{ pkgs, ... }:
 {
-  inputs,
-  pkgs,
-  ...
-}:
-{
-  home.packages = [
-    inputs.ghostty.packages."${pkgs.system}".default
+  home.packages = with pkgs; [
+    ghostty
   ];
-
   home.file.".config/ghostty/config" = {
     source = ./ghostty/config;
     recursive = true;

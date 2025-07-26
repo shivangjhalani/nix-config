@@ -20,6 +20,57 @@
           "gi" = "implementation";
           "K" = "hover";
         };
+        #keymaps.diagnostic = {
+        #  "<leader>e" = "open_float";
+        #  "[d" = "goto_prev";
+        #  "]d" = "goto_next";
+        #  "<leader>q" = "setloclist";
+        #};
+      };
+    };
+
+    diagnostic.settings = {
+      virtual_text = {
+        enabled = true;
+        source = "if_many";
+        prefix = "●";
+        format = {
+          __raw = ''
+            function(diagnostic)
+              if diagnostic.severity == vim.diagnostic.severity.ERROR then
+                return string.format("  %s", diagnostic.message)
+              elseif diagnostic.severity == vim.diagnostic.severity.WARN then
+                return string.format("  %s", diagnostic.message)
+              elseif diagnostic.severity == vim.diagnostic.severity.INFO then
+                return string.format("  %s", diagnostic.message)
+              else
+                return string.format("  %s", diagnostic.message)
+              end
+            end
+          '';
+        };
+      };
+      signs = {
+        enabled = true;
+        text = {
+          error = "";
+          warn = "";
+          hint = "";
+          info = "";
+        };
+      };
+      update_in_insert = false;
+      underline = {
+        enabled = true;
+      };
+      severity_sort = true;
+      float = {
+        focusable = false;
+        style = "minimal";
+        border = "rounded";
+        source = "always";
+        header = "";
+        prefix = "";
       };
     };
 

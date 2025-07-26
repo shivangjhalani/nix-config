@@ -20,7 +20,7 @@
     gnomeExtensions.rounded-window-corners-reborn
     gnomeExtensions.clipboard-indicator
     #gnomeExtensions.cronomix
-    gnomeExtensions.gsconnect
+    # gnomeExtensions.gsconnect
   ];
 
   dconf.settings = {
@@ -36,14 +36,13 @@
         "blur-my-shell@aunetx"
         "hidetopbar@mathieu.bidon.ca"
         "just-perfection-desktop@just-perfection"
-        #"gsconnect@andyholmes.github.io"
         #"dash-to-dock@micxgx.gmail.com"
         #"pano@elhan.io"
         "appindicatorsupport@rgcjonas.gmail.com"
         "rounded-window-corners@fxgn"
         "clipboard-indicator@tudmotu.com"
         #"cronomix@zagortenay333"
-        "gsconnect@andyholmes.github.io"
+        # "gsconnect@andyholmes.github.io"
       ];
     };
 
@@ -79,8 +78,8 @@
     #   global-shortcut = [ "<Super>v" ];
     # };
     "org/gnome/shell/extensions/clipboard-indicator" = {
-      cache-size = 100;
-      history-size = 100;
+      cache-size = 500;
+      history-size = 10000;
       toggle-menu = [ "<Super>v" ];
     };
   };

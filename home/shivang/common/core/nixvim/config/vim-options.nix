@@ -123,22 +123,23 @@
           desc = "Delete selection to black hole in visual mode";
         };
       }
-      {
-        mode = "n";
-        key = "<leader>ct";
-        action = "<cmd>CopilotChatToggle<CR>";
-        options = {
-          desc = "CopilotChatToggle";
-        };
-      }
-      {
-        mode = "n";
-        key = "<leader>cr";
-        action = "<cmd>CopilotChatReset<CR>";
-        options = {
-          desc = "CopilotChatReset";
-        };
-      }
+      # NO LONGER USING CopilotChat, USING Avante
+      # {
+      #   mode = "n";
+      #   key = "<leader>ct";
+      #   action = "<cmd>CopilotChatToggle<CR>";
+      #   options = {
+      #     desc = "CopilotChatToggle";
+      #   };
+      # }
+      # {
+      #   mode = "n";
+      #   key = "<leader>cr";
+      #   action = "<cmd>CopilotChatReset<CR>";
+      #   options = {
+      #     desc = "CopilotChatReset";
+      #   };
+      # }
       {
         mode = "n";
         key = "<C-u>";

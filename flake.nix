@@ -11,8 +11,6 @@
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
     systems.url = "github:nix-systems/default";
 
-    ghostty.url = "github:ghostty-org/ghostty";
-
     zen-browser.url = "github:youwen5/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -26,7 +24,7 @@
     #   inputs.nixpkgs-stable.follows = "nixpkgs";
     # };
 
-    nix-colors.url = "github:misterio77/nix-colors";
+    # nix-colors.url = "github:misterio77/nix-colors";
 
     nixvim = {
       #url = "github:nix-community/nixvim/nixos-24.05";
@@ -34,12 +32,12 @@
       url = "github:nix-community/nixvim";
     };
 
-    # USING NIX-ALIEN INSTEAD
+    # Installed as programs.nix-ld
     # nix-ld.url = "github:Mic92/nix-ld";
     # nix-ld.inputs.nixpkgs.follows = "nixpkgs";
 
-    nix-alien.url = "github:thiagokokada/nix-alien";
-    nix-alien.inputs.nixpkgs.follows = "nixpkgs";
+    # nix-alien.url = "github:thiagokokada/nix-alien";
+    # nix-alien.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
