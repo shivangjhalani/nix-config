@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    flameshot
+    hadoop_3_4
   ];
 }
+

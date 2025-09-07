@@ -78,8 +78,8 @@
     #   global-shortcut = [ "<Super>v" ];
     # };
     "org/gnome/shell/extensions/clipboard-indicator" = {
-      cache-size = 500;
-      history-size = 10000;
+      cache-size = 200;
+      history-size = 1000;
       toggle-menu = [ "<Super>v" ];
     };
   };

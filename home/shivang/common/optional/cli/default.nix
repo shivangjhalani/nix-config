@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./gh.nix
     ./git.nix
@@ -7,6 +8,7 @@
     ./yazi.nix
     ./neofetch.nix
     ./langs.nix
+    ./zoxide.nix
   ];
   home.packages = with pkgs; [
     #comma # Install and run programs by sticking a , before them

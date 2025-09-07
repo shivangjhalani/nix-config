@@ -4,9 +4,11 @@
   lib,
   inputs,
   ...
-}: let
+}:
+let
   flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-in {
+in
+{
   nix = {
     settings = {
       #extra-substituters = lib.mkAfter ["https://cache.m7.rs"];
@@ -14,12 +16,12 @@ in {
       experimental-features = [
         "nix-command"
         "flakes"
-#"ca-derivations"
+        #"ca-derivations"
       ];
       warn-dirty = false;
       flake-registry = ""; # Disable global flake registry
     };
-    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
+    registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
   };
 
   home.sessionVariables = {

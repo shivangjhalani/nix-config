@@ -33,7 +33,8 @@
     # Garbage Collection
     gc = {
       automatic = true;
-      options = "--delete-older-than 10d";
+      dates = "weekly";
+      options = "--delete-older-than 30d";
     };
   };
 }

@@ -5,6 +5,7 @@
   outputs,
   lib,
   config,
+  pkgs,
   ...
 }:
 {
@@ -76,11 +77,13 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+  };
   networking = {
     firewall = {
-      allowedTCPPorts = [ 1716 ];  # Or use lib.range 1714 1764 for full range
-      allowedUDPPorts = [ 1716 ];  # Or use a range if preferred
+      allowedTCPPorts = [ 1716 ]; # Or use lib.range 1714 1764 for full range
+      allowedUDPPorts = [ 1716 ]; # Or use a range if preferred
     };
   };
 
@@ -104,6 +107,27 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-gnome
+    ]; # Covers both GNOME and Hyprland
+    config = {
+      common.default = [ "gtk" ];
+      hyprland.default = [
+        "hyprland"
+        "gtk"
+      ];
+      gnome.default = [
+        "gnome"
+        "gtk"
+      ];
+    };
+  };
 
   # Enable sound with pipewire.
   #sound.enable = true; #This option no longer has any effect

@@ -12,7 +12,6 @@
         cairo
 
         # --- Graphics & Hardware Acceleration ---
-        mesa.drivers # Provides libgbm and hardware drivers
         mesa
         libgbm
         libglvnd # OpenGL vendor-neutral dispatch
@@ -33,6 +32,8 @@
         xorg.libxkbfile
         xorg.libxshmfence
         xorg.libxcb
+        xorg.libXScrnSaver
+        
 
         # --- Audio ---
         alsa-lib

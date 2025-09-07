@@ -5,7 +5,7 @@
 }: {
   imports = [
     # IMPORTANT
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
 
     ./config
   ];
