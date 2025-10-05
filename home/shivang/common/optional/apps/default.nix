@@ -13,6 +13,7 @@
     ./telegram.nix
     ./bottles.nix
     ./mpv.nix
+    ./newsflash.nix
     ./prismlauncher.nix
     # ./motrix.nix
     ./obs.nix

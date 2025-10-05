@@ -48,6 +48,7 @@
 
         # --- Core Dependencies & Parsers ---
         glib
+        glibc
         nss # Network Security Services
         nspr # Netscape Portable Runtime
         at-spi2-atk
@@ -56,6 +57,10 @@
         freetype
         fontconfig
         libxkbcommon
+        
+
+
+        zlib
       ]);
   };
 }

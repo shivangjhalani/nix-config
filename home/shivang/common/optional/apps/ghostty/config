@@ -1,5 +1,5 @@
 # Functionality
-gtk-tabs-location = hidden
+gtk-tabs-location = top
 scrollback-limit = 10000
 clipboard-read = allow
 clipboard-paste-protection = false
@@ -15,11 +15,12 @@ font-size = 12
 window-theme = ghostty
 background-opacity = 0.9
 background-blur = 20
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
 window-decoration = none
 window-padding-balance = true 
 resize-overlay = never
 unfocused-split-opacity = 1
+cursor-style = bar
 
 mouse-hide-while-typing = true
 
