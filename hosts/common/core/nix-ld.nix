@@ -57,6 +57,7 @@
         freetype
         fontconfig
         libxkbcommon
+        gcc-unwrapped
         
 
 

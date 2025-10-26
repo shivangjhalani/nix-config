@@ -150,6 +150,68 @@
         key = "<C-d>";
         action = "<C-d>zz";
       }
+      
+      # OPENCODE
+      {
+        mode = ["n" "x"];
+        key = "<leader>oa";
+        action = "<CMD>lua require('opencode').ask('@this: ', { submit = true })<CR>";
+        options.desc = "Ask about this";
+      }
+      {
+        mode = ["n" "x"];
+        key = "<leader>os";
+        action = "<CMD>lua require('opencode').select()<CR>";
+        options.desc = "Select prompt";
+      }
+      {
+        mode = ["n" "x"];
+        key = "<leader>o+";
+        action = "<CMD>lua require('opencode').prompt('@this')<CR>";
+        options.desc = "Add this";
+      }
+      {
+        mode = "n";
+        key = "<leader>ot";
+        action = "<CMD>lua require('opencode').toggle()<CR>";
+        options.desc = "Toggle embedded";
+      }
+      {
+        mode = "n";
+        key = "<leader>oc";
+        action = "<CMD>lua require('opencode').command()<CR>";
+        options.desc = "Select command";
+      }
+      {
+        mode = "n";
+        key = "<leader>on";
+        action = "<CMD>lua require('opencode').command('session_new')<CR>";
+        options.desc = "New session";
+      }
+      {
+        mode = "n";
+        key = "<leader>oi";
+        action = "<CMD>lua require('opencode').command('session_interrupt')<CR>";
+        options.desc = "Interrupt session";
+      }
+      {
+        mode = "n";
+        key = "<leader>oA";
+        action = "<CMD>lua require('opencode').command('agent_cycle')<CR>";
+        options.desc = "Cycle selected agent";
+      }
+      {
+        mode = "n";
+        key = "<S-C-u>";
+        action = "<CMD>lua require('opencode').command('messages_half_page_up')<CR>";
+        options.desc = "Messages half page up";
+      }
+      {
+        mode = "n";
+        key = "<S-C-d>";
+        action = "<CMD>lua require('opencode').command('messages_half_page_down')<CR>";
+        options.desc = "Messages half page down";
+      }
     ];
 
     #extraConfigVim = ''

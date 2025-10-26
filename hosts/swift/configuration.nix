@@ -108,6 +108,8 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  services.fwupd.enable = true;
+
   hardware.bluetooth.enable = true;
   # services.blueman.enable = true;
 

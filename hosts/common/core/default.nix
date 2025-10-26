@@ -24,6 +24,8 @@
     # Defaults env_keep + =SSH_AUTH_SOCK
   '';
 
+  powerManagement.cpuFreqGovernor = "performance"; # "ondemand", "powersave", "performance"
+
   home-manager.useGlobalPkgs = true;
   home-manager.extraSpecialArgs = {
     inherit inputs outputs;

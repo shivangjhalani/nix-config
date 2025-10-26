@@ -1,15 +1,22 @@
-{ ... }:
+{ pkgs, ... }:
 {
-  # Enable the X11 windowing system.
+
+  # Pre 25.11
   services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  # # As of 25.11
+  # services.displayManager.gdm.enable = true;
+  # services.desktopManager.gnome.enable = true;
 
-  # Configure keymap in X11
-  # services.xserver = {
-  #   xkb.layout = "us";
-  #   xkb.variant = "";
-  # };
+  # To disable installing GNOME's suite of applications
+  # and only be left with GNOME shell.
+  services.gnome.core-apps.enable = true;
+  services.gnome.core-developer-tools.enable = false;
+  services.gnome.games.enable = false;
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-tour
+    gnome-user-docs
+  ];
 }

@@ -1,12 +1,45 @@
+{ config, lib, ... }:
+let
+  get_bufnrs.__raw = ''
+    function()
+      local buf_size_limit = 1024 * 1024 -- 1MB size limit
+      local bufs = vim.api.nvim_list_bufs()
+      local valid_bufs = {}
+      for _, buf in ipairs(bufs) do
+        if vim.api.nvim_buf_is_loaded(buf) and vim.api.nvim_buf_get_offset(buf, vim.api.nvim_buf_line_count(buf)) < buf_size_limit then
+          table.insert(valid_bufs, buf)
+        end
+      end
+      return valid_bufs
+    end
+  '';
+in
 {
   programs.nixvim = {
     plugins = {
-      luasnip = {
+      friendly-snippets = {
         enable = true;
-        fromVscode = [ { } ]; # This enables loading snippets from friendly-snippets
       };
-
-      friendly-snippets.enable = true;
+      luasnip.enable = true;
+      copilot-lua = {
+        enable = true;
+        settings = {
+          suggestion.enabled = false;
+          panel.enabled = false;
+          filetypes = {
+            yaml = false;
+            markdown = false;
+            help = false;
+            gleam = false; # Copilot doesn't really help when writing Gleam
+            gitcommit = false;
+            gitrebase = false;
+            hgcommit = false;
+            svn = false;
+            cvs = false;
+            "." = false;
+          };
+        };
+      };
 
       cmp-buffer = {
         enable = true;
@@ -30,10 +63,10 @@
 
       cmp = {
         enable = true;
-        autoEnableSources = true;
+
         settings = {
           experimental = {
-            ghost_text = false;
+            ghost_text = true;
           };
           snippet.expand = ''
             function(args)
@@ -41,18 +74,89 @@
             end
           '';
           sources = [
-            { name = "copilot"; }
-            { name = "nvim_lsp"; }
-            { name = "luasnip"; }
+            {
+              name = "nvim_lsp";
+              priority = 1000;
+              option = {
+                inherit get_bufnrs;
+              };
+            }
+            {
+              name = "nvim_lsp_signature_help";
+              priority = 1000;
+              option = {
+                inherit get_bufnrs;
+              };
+            }
+            {
+              name = "gitlab";
+              priority = 1000;
+              option = {
+                hosts = [ "https://gitlab.dnm.radiofrance.fr" ];
+              };
+            }
+            {
+              name = "nvim_lsp_document_symbol";
+              priority = 1000;
+              option = {
+                inherit get_bufnrs;
+              };
+            }
+            {
+              name = "treesitter";
+              priority = 850;
+              option = {
+                inherit get_bufnrs;
+              };
+            }
+            {
+              name = "luasnip";
+              priority = 750;
+            }
             {
               name = "buffer";
-              option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
+              priority = 500;
+              option = {
+                inherit get_bufnrs;
+              };
             }
-            { name = "nvim_lua"; }
-            { name = "path"; }
+            {
+              name = "copilot";
+              priority = 400;
+            }
+            {
+              name = "rg";
+              priority = 300;
+            }
+            {
+              name = "path";
+              priority = 300;
+            }
+            {
+              name = "cmdline";
+              priority = 300;
+            }
+            {
+              name = "spell";
+              priority = 300;
+            }
+            {
+              name = "git";
+              priority = 250;
+            }
+            {
+              name = "zsh";
+              priority = 250;
+            }
+            {
+              name = "calc";
+              priority = 150;
+            }
+            {
+              name = "emoji";
+              priority = 100;
+            }
           ];
-
-          preselect = "cmp.PreselectMode.None";
 
           formatting = {
             fields = [
@@ -69,41 +173,42 @@
                     Text = "󰉿",
                     Method = "󰆧",
                     Function = "󰆧",
-                    Constructor = "",
+                    Constructor = "",
                     Field = "󰜢",
                     Variable = "󰀫",
                     Class = "󰠱",
-                    Interface = "",
-                    Module = "",
+                    Interface = "",
+                    Module = "",
                     Property = "󰜢",
                     Unit = "󰑭",
                     Value = "󰎠",
-                    Enum = "",
+                    Enum = "",
                     Keyword = "󰌋",
-                    Snippet = "",
+                    Snippet = "",
                     Color = "󰏘",
                     File = "󰈚",
                     Reference = "󰈇",
                     Folder = "󰉋",
-                    EnumMember = "",
+                    EnumMember = "",
                     Constant = "󰏿",
                     Struct = "󰙅",
-                    Event = "",
+                    Event = "",
                     Operator = "󰆕",
                     TypeParameter = "󰊄",
-                    Table = "",
+                    Table = "",
                     Object = "󰅩",
-                    Tag = "",
+                    Tag = "",
                     Array = "[]",
-                    Boolean = "",
-                    Number = "",
+                    Boolean = "",
+                    Number = "",
                     Null = "󰟢",
                     String = "󰉿",
-                    Calendar = "",
+                    Calendar = "",
                     Watch = "󰥔",
-                    Package = "",
-                    Codeium = "",
-                    TabNine = "",
+                    Package = "",
+                    Copilot = "",
+                    Codeium = "",
+                    TabNine = "",
                   }
 
                   local icon = icons[item.kind] or ""
@@ -115,7 +220,7 @@
 
           window = {
             completion = {
-              winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None";
+              winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
               scrollbar = false;
               sidePadding = 0;
               border = [
@@ -130,7 +235,7 @@
               ];
             };
 
-            documentation = {
+            settings.documentation = {
               border = [
                 "╭"
                 "─"
@@ -141,7 +246,7 @@
                 "╰"
                 "│"
               ];
-              winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None";
+              winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
             };
           };
 
@@ -152,8 +257,8 @@
             "<C-k>" = "cmp.mapping.select_prev_item()";
             "<C-d>" = "cmp.mapping.scroll_docs(-4)";
             "<C-f>" = "cmp.mapping.scroll_docs(4)";
-            "<C-space>" = "cmp.mapping.complete()";
-            "<S-tab>" = "cmp.mapping.close()";
+            "<C-Space>" = "cmp.mapping.complete()";
+            "<S-Tab>" = "cmp.mapping.close()";
             "<Tab>" =
               # lua
               ''
@@ -168,32 +273,32 @@
                   end
                 end
               '';
-            # "<Down>" =
-            #   # lua
-            #   ''
-            #     function(fallback)
-            #       if cmp.visible() then
-            #         cmp.select_next_item()
-            #       elseif require("luasnip").expand_or_jumpable() then
-            #         vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-expand-or-jump", true, true, true), "")
-            #       else
-            #         fallback()
-            #       end
-            #     end
-            #   '';
-            # "<Up>" =
-            #   # lua
-            #   ''
-            #     function(fallback)
-            #       if cmp.visible() then
-            #         cmp.select_prev_item()
-            #       elseif require("luasnip").jumpable(-1) then
-            #         vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-jump-prev", true, true, true), "")
-            #       else
-            #         fallback()
-            #       end
-            #     end
-            #   '';
+            "<Down>" =
+              # lua
+              ''
+                function(fallback)
+                  if cmp.visible() then
+                    cmp.select_next_item()
+                  elseif require("luasnip").expand_or_jumpable() then
+                    vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-expand-or-jump", true, true, true), "")
+                  else
+                    fallback()
+                  end
+                end
+              '';
+            "<Up>" =
+              # lua
+              ''
+                function(fallback)
+                  if cmp.visible() then
+                    cmp.select_prev_item()
+                  elseif require("luasnip").jumpable(-1) then
+                    vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-jump-prev", true, true, true), "")
+                  else
+                    fallback()
+                  end
+                end
+              '';
           };
         };
       };

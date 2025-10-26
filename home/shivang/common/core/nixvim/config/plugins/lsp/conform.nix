@@ -45,6 +45,9 @@
       settings = {
         notify_on_error = true;
         formatters_by_ft = {
+          go = [ 
+            "golines"
+          ];
           html = [
             [
               "prettierd"
@@ -120,7 +123,11 @@
           };
           prettierd = {
             command = "${lib.getExe pkgs.prettierd}";
-            args = ["--stdin-filepath" "$FILENAME" "--single-attribute-per-line"];
+            args = [
+              "--stdin-filepath"
+              "$FILENAME"
+              "--single-attribute-per-line"
+            ];
           };
           stylua = {
             command = "${lib.getExe pkgs.stylua}";

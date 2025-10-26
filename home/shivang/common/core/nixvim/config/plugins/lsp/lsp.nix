@@ -1,119 +1,203 @@
+{ lib, pkgs, ... }:
 {
   programs.nixvim = {
     plugins = {
+      lsp-format = {
+        enable = true;
+      };
       lsp = {
         enable = true;
+        inlayHints = true;
         servers = {
-          bashls.enable = true;
-          clangd.enable = true;
-          gopls.enable = true;
-          nixd.enable = true;
-          eslint.enable = true;
-          html.enable = true;
-          cssls.enable = true;
-          ts_ls.enable = true;
+          nixd = {
+            enable = true;
+            settings =
+              let
+                flake = ''(builtins.getFlake "github:elythh/flake)""'';
+                flakeNixvim = ''(builtins.getFlake "github:elythh/nixvim)""'';
+              in
+              {
+                nixpkgs = {
+                  expr = "import ${flake}.inputs.nixpkgs { }";
+                };
+                formatting = {
+                  command = [ "${lib.getExe pkgs.nixfmt-rfc-style}" ];
+                };
+                options = {
+                  nixos.expr = ''${flake}.nixosConfigurations.grovetender.options'';
+                  nixvim.expr = ''${flakeNixvim}.packages.${pkgs.system}.default.options'';
+                };
+              };
+          };
+          yamlls = {
+            enable = true;
+            settings = {
+              schemaStore = {
+                enable = false;
+                url = "";
+              };
+            };
+          };
+          # ltex = {
+          #   enable = true;
+          #   settings = {
+          #     enabled = [ "astro" "html" "latex" "markdown" "text" "tex" "gitcommit" ];
+          #     completionEnabled = true;
+          #     language = "en-US de-DE nl";
+          #     # dictionary = {
+          #     #   "nl-NL" = [
+          #     #     ":/home/liv/.local/share/nvim/ltex/nl-NL.txt"
+          #     #   ];
+          #     #   "en-US" = [
+          #     #     ":/home/liv/.local/share/nvim/ltex/en-US.txt"
+          #     #   ];
+          #     #   "de-DE" = [
+          #     #     ":/home/liv/.local/share/nvim/ltex/de-DE.txt"
+          #     #   ];
+          #     # };
+          #   };
+          # };
+
+          # Golang
+          gopls = {
+            enable = true;
+            autostart = true;
+          };
+
+          # Lua
+          lua_ls = {
+            enable = true;
+            settings.telemetry.enable = false;
+          };
+
+          # Rust
+          rust_analyzer = {
+            enable = true;
+            installRustc = true;
+            installCargo = true;
+          };
+
+          # Spellcheck
+          harper_ls = {
+            enable = true;
+            settings.settings = {
+              "harper-ls" = {
+                linters = {
+                  boring_words = true;
+                  linking_verbs = true;
+                  # Rarely useful with coding
+                  sentence_capitalization = false;
+                  spell_check = false;
+                };
+                codeActions = {
+                  forceStable = true;
+                };
+              };
+            };
+          };
+
+          ts_ls.enable = true; # TS/JS
+          cssls.enable = true; # CSS
+          tailwindcss.enable = true; # TailwindCSS
+          html.enable = true; # HTML
+          astro.enable = true; # AstroJS
+          phpactor.enable = true; # PHP
+          svelte.enable = false; # Svelte
+          pyright.enable = true; # Python
+          # nil_ls.enable = true; # Nix
+          dockerls.enable = true; # Docker
+          bashls.enable = true; # Bash
+          clangd.enable = true; # C/C++
+          csharp_ls.enable = true; # C#
+          markdown_oxide.enable = true; # Markdown
         };
-        keymaps.lspBuf = {
-          "gd" = "definition";
-          "gD" = "references";
-          "gt" = "type_definition";
-          "gi" = "implementation";
-          "K" = "hover";
+
+        keymaps = {
+          silent = true;
+          lspBuf = {
+            gd = {
+              action = "definition";
+              desc = "Goto Definition";
+            };
+            gr = {
+              action = "references";
+              desc = "Goto References";
+            };
+            gD = {
+              action = "declaration";
+              desc = "Goto Declaration";
+            };
+            gI = {
+              action = "implementation";
+              desc = "Goto Implementation";
+            };
+            gT = {
+              action = "type_definition";
+              desc = "Type Definition";
+            };
+            # Use LSP saga keybinding instead
+            # K = {
+            #   action = "hover";
+            #   desc = "Hover";
+            # };
+            # "<leader>cw" = {
+            #   action = "workspace_symbol";
+            #   desc = "Workspace Symbol";
+            # };
+            "<leader>cr" = {
+              action = "rename";
+              desc = "Rename";
+            };
+          };
+          # diagnostic = {
+          #   "<leader>cd" = {
+          #     action = "open_float";
+          #     desc = "Line Diagnostics";
+          #   };
+          #   "[d" = {
+          #     action = "goto_next";
+          #     desc = "Next Diagnostic";
+          #   };
+          #   "]d" = {
+          #     action = "goto_prev";
+          #     desc = "Previous Diagnostic";
+          #   };
+          # };
         };
-        #keymaps.diagnostic = {
-        #  "<leader>e" = "open_float";
-        #  "[d" = "goto_prev";
-        #  "]d" = "goto_next";
-        #  "<leader>q" = "setloclist";
-        #};
       };
     };
-
-    diagnostic.settings = {
-      virtual_text = {
-        enabled = true;
-        source = "if_many";
-        prefix = "●";
-        format = {
-          __raw = ''
-            function(diagnostic)
-              if diagnostic.severity == vim.diagnostic.severity.ERROR then
-                return string.format("  %s", diagnostic.message)
-              elseif diagnostic.severity == vim.diagnostic.severity.WARN then
-                return string.format("  %s", diagnostic.message)
-              elseif diagnostic.severity == vim.diagnostic.severity.INFO then
-                return string.format("  %s", diagnostic.message)
-              else
-                return string.format("  %s", diagnostic.message)
-              end
-            end
-          '';
-        };
-      };
-      signs = {
-        enabled = true;
-        text = {
-          error = "";
-          warn = "";
-          hint = "";
-          info = "";
-        };
-      };
-      update_in_insert = false;
-      underline = {
-        enabled = true;
-      };
-      severity_sort = true;
-      float = {
-        focusable = false;
-        style = "minimal";
-        border = "rounded";
-        source = "always";
-        header = "";
-        prefix = "";
-      };
-    };
-
     extraConfigLua = ''
-      -- Ensure Telescope is loaded
-      local telescope = require('telescope')
-      local builtin = require('telescope.builtin')
+      local _border = "rounded"
 
-      -- LSP Keymaps
-      vim.api.nvim_create_autocmd('LspAttach', {
-        group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
-        callback = function(event)
-          local map = function(keys, func, desc)
-            vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
-          end
+      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+        vim.lsp.handlers.hover, {
+          border = _border
+        }
+      )
 
-          -- Use Telescope for LSP operations
-          map('gd', function() builtin.lsp_definitions() end, '[G]oto [D]efinition')
-          map('gr', function() builtin.lsp_references() end, '[G]oto [R]eferences')
-          map('gI', function() builtin.lsp_implementations() end, '[G]oto [I]mplementation')
-          map('<leader>D', function() builtin.lsp_type_definitions() end, 'Type [D]efinition')
-          map('<leader>ds', function() builtin.lsp_document_symbols() end, '[D]ocument [S]ymbols')
-          map('<leader>ws', function() builtin.lsp_dynamic_workspace_symbols() end, '[W]orkspace [S]ymbols')
+      vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+        vim.lsp.handlers.signature_help, {
+          border = _border
+        }
+      )
 
-          -- Other LSP mappings
-          map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-          map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-          map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+      vim.diagnostic.config{
+        float={border=_border}
+      };
 
-          -- Highlight references
-          local client = vim.lsp.get_client_by_id(event.data.client_id)
-          if client and client.supports_method('textDocument/documentHighlight') then
-            vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
-              buffer = event.buf,
-              callback = vim.lsp.buf.document_highlight,
-            })
-            vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
-              buffer = event.buf,
-              callback = vim.lsp.buf.clear_references,
-            })
-          end
-        end,
-      })
+      require('lspconfig.ui.windows').default_options = {
+        border = _border
+      }
+
+      config = function(_, opts)
+        local lspconfig = require('lspconfig')
+        for server, config in pairs(opts.servers) do
+          -- passing config.capabilities to blink.cmp merges with the capabilities in your
+          -- `opts[server].capabilities, if you've defined it
+          config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+          lspconfig[server].setup(config)
+        end
+      end;
     '';
   };
 }

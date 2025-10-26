@@ -3,5 +3,6 @@
     ./lsp.nix
     ./fidget.nix
     ./conform.nix
+    ./trouble.nix
   ];
 }

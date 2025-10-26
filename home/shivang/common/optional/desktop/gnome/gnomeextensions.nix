@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     gnome-extension-manager
     gnome-tweaks
+    refine
 
     # GNOME APPS
     gnome-podcasts
@@ -78,8 +79,8 @@
     #   global-shortcut = [ "<Super>v" ];
     # };
     "org/gnome/shell/extensions/clipboard-indicator" = {
-      cache-size = 200;
-      history-size = 1000;
+      # cache-size = 200;
+      history-size = 400;
       toggle-menu = [ "<Super>v" ];
     };
   };

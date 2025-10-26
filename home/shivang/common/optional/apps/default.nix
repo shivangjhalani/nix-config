@@ -4,21 +4,21 @@
     #./dragon.nix
     ./firefox.nix
     ./discord.nix
-    ./kitty.nix
+    # ./kitty.nix
     ./ghostty.nix
     ./obsidian.nix
     ./vlc.nix
-    ./vivaldi.nix
-    ./libreoffice.nix
+    # ./vivaldi.nix
+    # ./libreoffice.nix
     ./telegram.nix
     ./bottles.nix
     ./mpv.nix
-    ./newsflash.nix
-    ./prismlauncher.nix
+    # ./newsflash.nix
+    # ./prismlauncher.nix
     # ./motrix.nix
-    ./obs.nix
-    ./spotify.nix
-    ./flameshot.nix
+    # ./obs.nix
+    # ./spotify.nix
+    # ./flameshot.nix
     # ./nomachine-client.nix
     # ./kde-connect.nix
     ./transmission.nix
