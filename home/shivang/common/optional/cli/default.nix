@@ -10,6 +10,7 @@
     ./langs.nix
     ./zoxide.nix
     ./opencode.nix
+    ./claudecode.nix
   ];
   home.packages = with pkgs; [
     #comma # Install and run programs by sticking a , before them
@@ -44,6 +45,7 @@
     lolcat
     cowsay
     unzip
+    gnumake
     wget
 
     openvpn
@@ -51,6 +53,7 @@
     lsof
 
     jq
+    uv
 
     nix-index
 

@@ -10,17 +10,19 @@
     resources
     gnome-solanum
 
-    gnomeExtensions.espresso
+    # gnomeExtensions.espresso
     gnomeExtensions.vitals
     gnomeExtensions.blur-my-shell
-    gnomeExtensions.hide-top-bar
+    # gnomeExtensions.hide-top-bar
     gnomeExtensions.just-perfection
-    #gnomeExtensions.dash-to-dock
-    #gnomeExtensions.pano
+    gnomeExtensions.caffeine
+    # gnomeExtensions.dash-to-dock
+    # gnomeExtensions.pano
     gnomeExtensions.appindicator
     gnomeExtensions.rounded-window-corners-reborn
     gnomeExtensions.clipboard-indicator
-    #gnomeExtensions.cronomix
+    # gnomeExtensions.unite
+    # gnomeExtensions.cronomix
     # gnomeExtensions.gsconnect
   ];
 
@@ -33,9 +35,11 @@
         #"pop-shell@system76.com"
         "Vitals@CoreCoding.com"
         #"ddterm@amezin.github.com"
-        "espresso@coadmunkee.github.com"
+        # "unite@hardpixel.eu"
+        "caffeine@patapon.info"
+        # "espresso@coadmunkee.github.com"
         "blur-my-shell@aunetx"
-        "hidetopbar@mathieu.bidon.ca"
+        # "hidetopbar@mathieu.bidon.ca"
         "just-perfection-desktop@just-perfection"
         #"dash-to-dock@micxgx.gmail.com"
         #"pano@elhan.io"
@@ -59,8 +63,8 @@
       ];
     };
     "org/gnome/shell/extensions/hidetopbar" = {
-      enable-active-window = true;
-      enable-intellihide = true;
+      enable-active-window = false;
+      enable-intellihide = false;
     };
     "org/gnome/shell/extensions/espresso" = {
       show-notifications = false;

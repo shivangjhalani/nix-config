@@ -1,6 +1,6 @@
 { ... }:
 {
   programs.vscode = {
-    enable = false;
+    enable = true;
   };
 }

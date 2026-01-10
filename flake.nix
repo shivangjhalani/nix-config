@@ -3,8 +3,8 @@
 
   inputs = {
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # nixpkgs.url = "github:nixos/nixpkgs";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs";
     # You can access packages and modules from different nixpkgs revs
     # at the same time. Here's an working example:
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -27,9 +27,8 @@
     # nix-colors.url = "github:misterio77/nix-colors";
 
     nixvim = {
-      #url = "github:nix-community/nixvim/nixos-24.05";
+      url = "git+file:///home/shivang/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/nixvim";
     };
 
     # Installed as programs.nix-ld
@@ -68,6 +67,12 @@
       # Other options beside 'alejandra' include 'nixpkgs-fmt'
       formatter = forEachSystem (pkgs: pkgs.alejandra);
       devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });
+      nixConfig = {
+        extra-substituters = [ "https://nix-community.cachix.org" ];
+        extra-trusted-public-keys = [
+          "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+        ];
+      };
 
       # Your custom packages and modifications, exported as overlays
       overlays = import ./overlays { inherit inputs; };

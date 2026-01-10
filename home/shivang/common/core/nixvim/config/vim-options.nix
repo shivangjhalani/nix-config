@@ -150,22 +150,31 @@
         key = "<C-d>";
         action = "<C-d>zz";
       }
-      
+
       # OPENCODE
       {
-        mode = ["n" "x"];
+        mode = [
+          "n"
+          "x"
+        ];
         key = "<leader>oa";
         action = "<CMD>lua require('opencode').ask('@this: ', { submit = true })<CR>";
         options.desc = "Ask about this";
       }
       {
-        mode = ["n" "x"];
+        mode = [
+          "n"
+          "x"
+        ];
         key = "<leader>os";
         action = "<CMD>lua require('opencode').select()<CR>";
         options.desc = "Select prompt";
       }
       {
-        mode = ["n" "x"];
+        mode = [
+          "n"
+          "x"
+        ];
         key = "<leader>o+";
         action = "<CMD>lua require('opencode').prompt('@this')<CR>";
         options.desc = "Add this";

@@ -5,26 +5,32 @@
   config,
   outputs,
   ...
-}: {
-  imports =
-    [
-      #../features/nvim
-      ./nixvim
-      ./direnv.nix
+}:
+{
+  imports = [
+    #../features/nvim
+    # ./nixvim
+    ./direnv.nix
 
-    ]
-    ++ (builtins.attrValues outputs.homeModules);
+  ]
+  ++ (builtins.attrValues outputs.homeModules);
 
   nix = {
     package = lib.mkDefault pkgs.nix;
     settings = {
-#      experimental-features = [
-#        "nix-command"
-#        "flakes"
-#        "ca-derivations"
-#      ];
+      #      experimental-features = [
+      #        "nix-command"
+      #        "flakes"
+      #        "ca-derivations"
+      #      ];
       warn-dirty = false;
     };
+  };
+
+  home = {
+    packages = with pkgs; [
+      inputs.nixvim.packages.${pkgs.system}.default
+    ];
   };
 
   systemd.user.startServices = "sd-switch";
@@ -38,7 +44,7 @@
     username = lib.mkDefault "shivang";
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
     stateVersion = lib.mkDefault "24.05";
-    sessionPath = ["$HOME/.local/bin"];
+    sessionPath = [ "$HOME/.local/bin" ];
     sessionVariables = {
       FLAKE = "$HOME/Documents/NixConfig";
     };

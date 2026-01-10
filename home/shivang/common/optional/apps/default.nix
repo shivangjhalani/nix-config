@@ -16,7 +16,9 @@
     # ./newsflash.nix
     # ./prismlauncher.nix
     # ./motrix.nix
-    # ./obs.nix
+    ./obs.nix
+    ./uxplay.nix
+    ./antigravity.nix
     # ./spotify.nix
     # ./flameshot.nix
     # ./nomachine-client.nix
@@ -27,7 +29,8 @@
 
     ./cursor.nix
     ./vscode.nix
-    ./zed.nix
+    # ./zed.nix
+    ./warp.nix
     ./zen-browser.nix
     #./vdhcoapp.nix
     ./zotero.nix

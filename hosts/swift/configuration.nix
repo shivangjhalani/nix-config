@@ -82,6 +82,7 @@
   };
   networking = {
     firewall = {
+      enable = true;
       allowedTCPPorts = [ 1716 ]; # Or use lib.range 1714 1764 for full range
       allowedUDPPorts = [ 1716 ]; # Or use a range if preferred
     };
