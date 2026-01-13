@@ -2,7 +2,7 @@
   imports = [
     #./deluge.nix
     #./dragon.nix
-    ./firefox.nix
+    #./firefox.nix
     ./discord.nix
     # ./kitty.nix
     ./ghostty.nix
