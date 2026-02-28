@@ -52,7 +52,7 @@ in
         email = lib.mkDefault "shivang2004jhalani@gmail.com";
       };
       init.defaultBranch = "main";
-      user.signing.key = "~/.ssh/id_ed25519.pub";
+      user.signingkey = "~/.ssh/id_ed25519.pub";
       commit.gpgSign = lib.mkDefault true;
       gpg.format = "ssh";
 

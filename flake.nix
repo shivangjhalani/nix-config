@@ -1,5 +1,5 @@
 {
-  description = "<3";
+  description = "<3 <3";
 
   inputs = {
     # Nixpkgs
