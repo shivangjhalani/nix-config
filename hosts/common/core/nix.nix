@@ -28,6 +28,7 @@
         "flakes"
       ];
       warn-dirty = false;
+      trusted-users = [ "shivang" ];
     };
 
     # Garbage Collection

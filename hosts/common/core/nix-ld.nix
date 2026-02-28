@@ -33,7 +33,6 @@
         xorg.libxshmfence
         xorg.libxcb
         xorg.libXScrnSaver
-        
 
         # --- Audio ---
         alsa-lib
@@ -58,8 +57,6 @@
         fontconfig
         libxkbcommon
         gcc-unwrapped
-        
-
 
         zlib
       ]);

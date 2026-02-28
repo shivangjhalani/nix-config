@@ -11,6 +11,8 @@
     ./zoxide.nix
     ./opencode.nix
     ./claudecode.nix
+    ./amp-cli.nix
+    ./gemini-cli.nix
   ];
   home.packages = with pkgs; [
     #comma # Install and run programs by sticking a , before them
@@ -47,6 +49,7 @@
     unzip
     gnumake
     wget
+    devenv
 
     openvpn
     sshpass

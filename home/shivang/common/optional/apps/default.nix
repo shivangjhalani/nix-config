@@ -18,7 +18,6 @@
     # ./motrix.nix
     ./obs.nix
     ./uxplay.nix
-    ./antigravity.nix
     # ./spotify.nix
     # ./flameshot.nix
     # ./nomachine-client.nix
@@ -29,6 +28,8 @@
 
     ./cursor.nix
     ./vscode.nix
+    ./antigravity.nix
+    ./kiro.nix
     # ./zed.nix
     ./warp.nix
     ./zen-browser.nix

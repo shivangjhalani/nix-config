@@ -50,13 +50,11 @@ in
       user = {
         name = "shivangjhalani";
         email = lib.mkDefault "shivang2004jhalani@gmail.com";
-        # name = "shreshtha-dixit";
-        # email = lib.mkDefault "shreshtha.dixit.511@gmail.com";
       };
       init.defaultBranch = "main";
-      #user.signing.key = "CE707A9C17FAAC97907FF8EF2E61EA7BFE630927";
-      #commit.gpgSign = lib.mkDefault true;
-      #gpg.program = "${config.programs.gpg.package}/bin/gpg2";
+      user.signing.key = "~/.ssh/id_ed25519.pub";
+      commit.gpgSign = lib.mkDefault true;
+      gpg.format = "ssh";
 
       merge.conflictStyle = "zdiff3";
       commit.verbose = true;
