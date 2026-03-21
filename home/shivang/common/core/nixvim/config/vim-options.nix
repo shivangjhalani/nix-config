@@ -5,28 +5,29 @@
 
     clipboard.register = "unnamedplus";
 
-    colorschemes.catppuccin = {
-      enable = true;
-      settings = {
-        flavour = "mocha";
-        transparent_background = true;
-      };
-    };
-    # colorschemes.rose-pine = {
+    # colorschemes.catppuccin = {
     #   enable = true;
     #   settings = {
-    #     variant = "auto";
-    #     dark_variant = "moon";
-    #     dim_inactive_windows = true;
-    #     extend_background_behind_borders = true;
-    #
-    #     styles = {
-    #       bold = true;
-    #       italic = true;
-    #       transparency = true;
-    #     };
+    #     flavour = "mocha";
+    #     transparent_background = true;
     #   };
     # };
+    colorschemes.rose-pine = {
+      enable = true;
+      autoLoad = true;
+      settings = {
+        variant = "auto";
+        dark_variant = "moon";
+        dim_inactive_windows = true;
+        extend_background_behind_borders = true;
+
+        styles = {
+          bold = true;
+          italic = true;
+          transparency = true;
+        };
+      };
+    };
 
     opts = {
       updatetime = 100; # Faster completion

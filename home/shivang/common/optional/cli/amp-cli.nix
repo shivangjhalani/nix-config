@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    amp-cli
+  home.packages = [
+    # pkgs.unstable.amp-cli
   ];
 }

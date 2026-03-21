@@ -4,8 +4,8 @@
       enable = true;
       settings = {
         options = {
-          theme = "catppuccin";
-          #theme = "rose-pine";
+          # theme = "catppuccin";
+          theme = "rose-pine";
         };
       };
     };

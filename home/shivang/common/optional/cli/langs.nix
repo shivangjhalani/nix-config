@@ -4,8 +4,8 @@
     python312
     python312Packages.pip
 
-    nodejs_22
-    pnpm
+    # nodejs_22
+    # pnpm
 
     gcc
     cmake

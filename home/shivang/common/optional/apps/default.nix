@@ -9,7 +9,7 @@
     ./obsidian.nix
     ./vlc.nix
     # ./vivaldi.nix
-    # ./libreoffice.nix
+    ./libreoffice.nix
     ./telegram.nix
     ./bottles.nix
     ./mpv.nix
@@ -17,6 +17,7 @@
     # ./prismlauncher.nix
     # ./motrix.nix
     ./obs.nix
+    ./zoom.nix
     ./uxplay.nix
     # ./spotify.nix
     # ./flameshot.nix
@@ -30,7 +31,7 @@
     ./vscode.nix
     ./antigravity.nix
     ./kiro.nix
-    # ./zed.nix
+    ./zed.nix
     ./warp.nix
     ./zen-browser.nix
     #./vdhcoapp.nix

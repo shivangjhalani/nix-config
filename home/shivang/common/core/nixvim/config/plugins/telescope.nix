@@ -2,8 +2,8 @@
   programs.nixvim = {
     plugins.telescope = {
       enable = true;
-      #highlightTheme = "rose-pine";
-      highlightTheme = "catppuccin";
+      highlightTheme = "rose-pine";
+      # highlightTheme = "catppuccin";
       keymaps = {
         "<leader>ff" = "find_files";
         "<leader>fg" = "live_grep";

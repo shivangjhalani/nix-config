@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    telegram-desktop
+{ pkgs, ... }:
+{
+  home.packages = [
+    # pkgs.telegram-desktop
   ];
 }

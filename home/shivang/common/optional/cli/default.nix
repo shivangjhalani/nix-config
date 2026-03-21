@@ -13,8 +13,10 @@
     ./claudecode.nix
     ./amp-cli.nix
     ./gemini-cli.nix
+    ./codex.nix
+    ./eza.nix
   ];
-  home.packages = with pkgs; [
+  home.packages = [
     #comma # Install and run programs by sticking a , before them
     #distrobox # Nice escape hatch, integrates docker images with my environment
 
@@ -29,36 +31,37 @@
     #trekscii # Cute startrek cli printer
     #timer # To help with my ADHD paralysis
 
-    nixd # Nix LSP
-    alejandra # Nix formatter
-    nixfmt-rfc-style
-    nvd # Differ
-    nix-diff # Differ, more detailed
-    nix-output-monitor
-    #nh # Nice wrapper for NixOS and HM
+    pkgs.nixd # Nix LSP
+    pkgs.alejandra # Nix formatter
+    pkgs.nixfmt-rfc-style
+    pkgs.nvd # Differ
+    pkgs.nix-diff # Differ, more detailed
+    pkgs.nix-output-monitor
+    # pkgs. # nh # Nice wrapper for NixOS and HM
 
-    #zsh
-    #fzf
-    #bat
-    ripgrep
-    tree
-    fd
-    figlet
-    lolcat
-    cowsay
-    unzip
-    gnumake
-    wget
-    devenv
+    # pkgs. # zsh
+    # pkgs. # fzf
+    # pkgs. # bat
+    pkgs.lazygit
+    pkgs.ripgrep
+    pkgs.tree
+    pkgs.fd
+    pkgs.figlet
+    pkgs.lolcat
+    pkgs.cowsay
+    pkgs.unzip
+    pkgs.gnumake
+    pkgs.wget
+    pkgs.unstable.devenv
 
-    openvpn
-    sshpass
-    lsof
+    pkgs.openvpn
+    pkgs.sshpass
+    pkgs.lsof
 
-    jq
-    uv
+    pkgs.jq
+    pkgs.uv
 
-    nix-index
+    pkgs.nix-index
 
     #ltex-ls # Spell checking LSP
   ];

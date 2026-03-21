@@ -4,14 +4,6 @@
   ...
 }:
 with lib;
-let
-  # My shell aliases
-  myAliases = {
-    #cat = "bat";
-    v = "nvim";
-    c = "clear";
-  };
-in
 {
   #programs.bash = {
   #   enable = true;
@@ -48,7 +40,11 @@ in
       ];
     };
     syntaxHighlighting.enable = true;
-    shellAliases = myAliases;
+    shellAliases = {
+      #cat = "bat";
+      v = "nvim";
+      c = "clear";
+    };
 
     initContent = ''
       function y() {
